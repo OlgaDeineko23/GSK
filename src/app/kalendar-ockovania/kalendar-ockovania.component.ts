@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KalendarOckovaniaComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
   }
