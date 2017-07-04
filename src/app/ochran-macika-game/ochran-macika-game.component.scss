@@ -1,0 +1,109 @@
+.game {
+	position: relative;
+	overflow: hidden;
+}
+
+.container {
+	width: 1080px;
+	height: 1850px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.container * {
+	font-family: 'Arial';
+}
+
+.logo {
+	margin: 98px auto 0 auto;
+	width: 178px;
+}
+
+.life {
+	&__list {
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		position: absolute;
+		left: 40px;
+		top: 50px;
+		li {
+			margin-right: 15px;
+		}
+	}
+}
+
+.score {
+	width: 464px;
+	border-radius: 10px;
+	box-shadow: 0px 8px 76px 0px rgba(0, 0, 0, 0.1);
+	margin: 80px auto 0 auto;
+	&__title {
+		font-size: 20px;
+		font-weight: bold;
+		color: #FFF;
+		margin: 0;
+		padding: 20px 0;
+		text-align: center;
+		background-image: linear-gradient( 60deg, rgb(239,69,31) 0%, rgb(252,221,87) 100%);
+		border-radius: 10px 10px 0 0;
+	}
+	&__description {
+		font-size: 100px;
+		color: rgb(238, 104, 0);
+		padding: 38px 0;
+		text-align: center;
+		margin: 0;
+	}
+}
+
+.taddy {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+	&:before {
+		content: "";
+		background-color: #000;
+		opacity: 0.1;
+		width: 454px;
+		height: 75px;
+		position: absolute;
+		bottom: -10px;
+		left: 53%;
+		transform: translateX(-50%);
+		border-radius: 50%;
+		z-index: -1;
+	}
+	img {
+		width: 500px;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.decorations {
+	&__tree {
+		position: absolute;
+		top: 30%;
+		width: 880px;
+		transform: translateY(-50%);
+		right: -500px;
+	}
+}
+
+#viruses {
+	list-style: none;
+}
+
+.virus {
+	position: absolute;
+	width: 140px;
+}
+
+button {
+	position: absolute;
+	bottom: 0;
+}
