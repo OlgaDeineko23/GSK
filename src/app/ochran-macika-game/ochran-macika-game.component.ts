@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import 'assets/script/game.js';
 
 @Component({
   selector: 'app-ochran-macika-game',
