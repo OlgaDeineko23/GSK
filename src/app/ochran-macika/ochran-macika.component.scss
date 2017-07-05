@@ -1,9 +1,129 @@
+.start-game {
+	position: relative;
+	overflow: hidden;
+}
+
 .container {
 	width: 1080px;
+	height: 100vh;
 	margin: 0 auto;
+}
+
+.container * {
+	font-family: 'Arial';
 }
 
 .logo {
 	width: 178px;
 	margin: 98px auto 110px auto;
+}
+
+.page-title {
+	font-weight: bold;
+	color: rgb(240, 89, 38);
+	text-align-last: center;
+	margin: 0;
+}
+
+.page-description {
+	color: #9d9d9d;
+	text-align: center;
+	strong {
+		color: #F1642A;
+	}
+}
+
+.taddy {
+	position: relative;
+	margin: 0 auto;
+	z-index: 20;
+		&:before {
+		content: "";
+		background-color: #000;
+		opacity: 0.1;
+		width: 454px;
+		height: 75px;
+		position: absolute;
+		bottom: -10px;
+		left: 53%;
+		transform: translateX(-50%);
+		border-radius: 50%;
+		z-index: -1;
+	}
+}
+
+.decorations {
+	&__tree {
+		position: absolute;
+	}
+	&__branch {
+		position: absolute;
+	}
+	&__sandbox {
+		position: absolute;
+		transform: scale(-1, 1);
+filter: FlipH;
+	}
+	&__grass {
+		position: absolute;
+		width: 100vw;
+		bottom: 0;
+		z-index: -1;
+	}
+}
+
+@media (max-width: 720px) {
+	.container {
+		width: 100%;
+	}
+	.logo {
+		padding: 15px 0 31px 0;
+		margin: 0 auto;
+		width: 52px;
+	}
+	.page-title {
+		font-size: 30px;
+	}
+	.page-description {
+		font-size: 16px;
+		line-height: 22px;
+		text-align: center;
+	}
+	.taddy {
+		width: 55vw;
+		&:before {
+  width: 164px;
+  height: 28px;
+		}
+	}
+	button {
+		background-image: linear-gradient( 86deg, rgb(239,69,31) 0%, rgb(252,221,87) 100%);
+		position: absolute;
+		border: none;
+		border-radius: 5px;
+		transform: rotate(5deg);
+		font-size: 20px;
+		font-weight: bold;
+		color: #FFF;
+		width: 100%;
+		top: 48%;
+		height: 41px;
+	}
+	.decorations {
+		&__tree {
+			width: 80vw;
+			right: -60vw;
+			top: 40vw;
+		}
+		&__branch {
+			width: 60vw;
+			left: -43vw;
+			top: 130vw;
+		}
+		&__sandbox {
+			width: 60vw;
+			right: -43vw;
+			top: 130vw;
+		}
+	}
 }
