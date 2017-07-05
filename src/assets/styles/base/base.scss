@@ -5,11 +5,11 @@ html {
 html,
 body {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  height: 100%;
 }
 
 body {
+  font-family: $font-arial;
   font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

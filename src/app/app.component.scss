@@ -1,0 +1,17 @@
+@import "../assets/styles/utilities/variables";
+
+.main-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #ccc;
+  height:100%;
+
+  &__container {
+    background-color: $white;
+    position: relative;
+    height: 568px;
+    width: 320px;
+    overflow: hidden;
+  }
+}
