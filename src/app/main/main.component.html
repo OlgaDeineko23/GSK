@@ -1,19 +1,21 @@
 <div class="splash-screen">
+
   <app-header></app-header>
 
 
   <div class="splash-screen__heading">
-    <!--<h1>-->
-      <!--#Fellbetter-->
-    <!--</h1>-->
-  </div>
-
-  <div class="splash-screen__bottom-bg">
+    <img src="../../assets/images/hash-logo.png"
+         srcset="../../assets/images/hash-logo@2x.png 2x,
+					 ../../assets/images/hash-logo@3x.png 3x"
+         class="hash-logo">
   </div>
 
   <div class="splash-screen__btn-area">
     <a href="#" [routerLink]="['/menu']">
-      <img src="../../assets/images/splash-screen__hand.svg" alt="Click it">
+      <img src="../../assets/images/hand.png"
+           srcset="../../assets/images/hand@2x.png 2x,
+					 ../../assets/images/hand@3x.png 3x"
+           class="hand">
     </a>
   </div>
 </div>

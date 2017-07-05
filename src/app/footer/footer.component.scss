@@ -1,0 +1,11 @@
+@import "../../assets/styles/utilities/variables";
+@import "../../assets/styles/utilities/mixins";
+
+.footer {
+  @include retina-js("../../assets/images/1.png", 1, auto auto, -330px 4px no-repeat transparent);
+  bottom: 0;
+  height: 90px;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}

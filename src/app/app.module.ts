@@ -11,6 +11,7 @@ import { MainComponent } from './main/main.component';
 import { OchranMacikaResultComponent } from './ochran-macika-result/ochran-macika-result.component';
 import { OchranMacikaGameComponent } from './ochran-macika-game/ochran-macika-game.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HeaderComponent } from './header/header.component';
     MainComponent,
     OchranMacikaResultComponent,
     OchranMacikaGameComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
