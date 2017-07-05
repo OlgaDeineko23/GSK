@@ -1,43 +1,45 @@
 <div class="game">
-<div class="container">
-<!-- 	<div class="logo">
-	<img src="assets/images/logo.svg" alt="Logo svg">
-</div> -->
+	<div class="container">
+		<div class="logo">
+			<img src="assets/images/logo.svg" alt="Logo svg">
+		</div>
 
-<div class="life">
-	<ul class="life__list" id="heart">
-		<li class="life__full"><img src="assets/images/heart.png" alt="heart"></li>
-		<li class="life__full"><img src="assets/images/heart.png" alt="heart"></li>
-		<li class="life__full"><img src="assets/images/heart.png" alt="heart"></li>
-	</ul>
-</div>
+		<img class="page-bg" src="assets/images/1.png" alt="Bg">
 
-<div class="score" id="score">
-	<h4 class="score__title">Jupí! Počet zničených vírusov</h4>
+		<div class="life">
+			<ul class="life__list" id="heart">
+				<li class="life__full"><img src="assets/images/heart.png" alt="heart"></li>
+				<li class="life__full"><img src="assets/images/heart.png" alt="heart"></li>
+				<li class="life__full"><img src="assets/images/heart.png" alt="heart"></li>
+			</ul>
+		</div>
 
-	<p id="total-score" class="score__description">0</p>
-</div>
+		<div class="score" id="score">
+			<h4 class="score__title">Jupí! Počet zničených vírusov</h4>
 
-	<div class="taddy">
-		<img class="taddy__health" src="assets/images/taddy.svg" alt="Taddy">
-		<img class="taddy__hurt" src="assets/images/taddy-hurt.svg" alt="Taddy">
-		<div class="taddy__head"></div>
-		<div class="taddy__body"></div>
-		<div class="taddy__legs"></div>
+			<p id="total-score" class="score__description">0</p>
+		</div>
+
+		<div class="taddy">
+			<img class="taddy__health" src="assets/images/taddy.svg" alt="Taddy">
+			<img class="taddy__hurt" src="assets/images/taddy-hurt.svg" alt="Taddy">
+			<div class="taddy__head"></div>
+			<div class="taddy__body"></div>
+			<div class="taddy__legs"></div>
+		</div>
+
+		<ul id="viruses"></ul>
+
+		<button class="finish-game" [routerLink]="['/ochran-macika/result']">Finish game</button>
+
+		<div class="decorations">
+			<img class="decorations__tree" src="assets/images/tree.svg" alt="Tree" />
+			<img class="decorations__branch" src="assets/images/branch.svg" alt="Branch" />
+			<img class="decorations__sandbox" src="assets/images/sandbox.svg" alt="Background" />
+			<img class="decorations__grass" src="assets/images/grass.png" alt="Grass" />
+			<img class="decorations__swing" src="assets/images/swing.svg" alt="Swing">
+		</div>
+
 	</div>
-
-	<ul id="viruses"></ul>
-
-<button class="finish-game" [routerLink]="['/ochran-macika/result']">Finish game</button>
-
-<div class="decorations">
-	<img class="decorations__tree" src="assets/images/tree.svg" alt="Tree" />
- 	<img class="decorations__branch" src="assets/images/branch.svg" alt="Branch" />
-<img class="decorations__sandbox" src="assets/images/sandbox.svg" alt="Background" />
-<img class="decorations__grass" src="assets/images/grass.png" alt="Grass" />
-<img class="decorations__swing" src="assets/images/swing.svg" alt="Swing">
-</div>
-
-</div>
 </div>
 

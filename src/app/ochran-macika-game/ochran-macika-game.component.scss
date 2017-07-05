@@ -1,276 +1,296 @@
 @import "../../assets/styles/utilities/variables";
 
+.page-bg {
+  position: absolute;
+  left: 0px;
+  top: -396px;
+  width: 532px;
+  height: 457px;
+}
+
 .main-wrapper__container {
-	width: 100%;
-	height: 100%;
+ width: 100%;
+ height: 100%;
 }
 
 .game {
-	position: relative;
-	overflow: hidden;
-	height: 100vh;
+ position: relative;
+ overflow: hidden;
+ height: 100%;
 }
 
 .container {
-	width: 90vw;
-	margin: 0 auto;
+ width: 100%;
+ margin: 0 auto;
 }
 
-.container * {
-	font-family: 'Arial';
+* {
+ font-family: 'Arial';
 }
 
 .logo {
-	margin: 98px auto 0 auto;
-	width: 178px;
+ padding: 15px 0 0 0;
+ margin: 0 auto;
+ width: 52px;
+ position: relative;
+ z-index: 20;
 }
 
 .life {
-	&__list {
-		padding: 0;
-		list-style: none;
-		display: flex;
-		flex-direction: row;
-		position: absolute;
-		left: 5vw;
-		top: 2vh;
-		li {
-			margin-right: 15px;
-		}
-	}
-	&__lost {
-		opacity: 0.2;
-	}
+ &__list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  li {
+   margin-right: 9px;
+   img {
+    width: 24px;
+  }
+}
+}
+&__lost {
+  opacity: 0.2;
+}
 }
 
 .score {
-	width: 42vw;
-	border-radius: 10px;
-	box-shadow: 0px 8px 76px 0px rgba(0, 0, 0, 0.1);
-	margin: 18.5vh auto 7vh auto;
-	position: relative;
-	background-color: #FFF;
-	z-index: 150;
-	&__title {
-		font-size: 20px;
-		font-weight: bold;
-		color: #FFF;
-		margin: 0;
-		padding: 20px 0;
-		text-align: center;
-		background-image: linear-gradient( 60deg, rgb(239,69,31) 0%, rgb(252,221,87) 100%);
-		border-radius: 10px 10px 0 0;
-	}
-	&__description {
-		font-size: 100px;
-		color: rgb(238, 104, 0);
-		padding: 19px 0;
-		text-align: center;
-		margin: 0;
-	}
+ box-shadow: 0px 8px 76px 0px rgba(0, 0, 0, 0.1);
+ position: relative;
+ background-color: #FFF;
+ z-index: 150;
+ border-radius: 3px;
+ width: 85%;
+ border-radius: 3px;
+ margin: 1.1rem auto 4.2rem auto;
+ &__title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #FFF;
+  margin: 0;
+  padding: 9px 0;
+  text-align: center;
+  background-image: linear-gradient( 60deg, rgb(239,69,31) 0%, rgb(252,221,87) 100%);
+  border-radius: 3px 3px 0 0;
+}
+&__description {
+  font-size: 38px;
+  color: rgb(238, 104, 0);
+  padding: 8px 0;
+  text-align: center;
+  margin: 0;
+}
 }
 
 .taddy {
-	position: relative;
-	z-index: 100;
-	text-align: center;
-	width: 46vw;
-	margin: 0 auto;
-	&__head {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 60%;
-	}
-	&__body {
-		position: absolute;
-		top: 60%;
-		width: 80%;
-		height: 20%;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-	&__legs {
-		position: absolute;
-		top: 80%;
-		height: 19%;
-		width: 66%;
-		left: 55%;
-		transform: translateX(-50%);
-	}
-	&__health {
-		transition: all .4s;
-	}
-	&__hurt {
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		transition: all .4s;
-		opacity: 0;
-	}
-	&:before {
-		content: "";
-		background-color: #000;
-		opacity: 0.1;
-		width: 454px;
-		height: 75px;
-		position: absolute;
-		bottom: -10px;
-		left: 53%;
-		transform: translateX(-50%);
-		border-radius: 50%;
-		z-index: -1;
-	}
+ position: relative;
+ z-index: 100;
+ text-align: center;
+ width: 47%;
+ margin: 0 auto;
+ &__head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+}
+&__body {
+  position: absolute;
+  top: 60%;
+  width: 80%;
+  height: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+&__legs {
+  position: absolute;
+  top: 80%;
+  height: 19%;
+  width: 66%;
+  left: 55%;
+  transform: translateX(-50%);
+}
+&__health {
+  transition: all .4s;
+}
+&__hurt {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all .4s;
+  opacity: 0;
+}
+&:before {
+  content: "";
+  background-color: #000;
+  opacity: 0.1;
+  width: 164px;
+  height: 28px;
+  position: absolute;
+  bottom: -10px;
+  left: 53%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  z-index: -1;
+}
 }
 
 .taddy_action {
-	.taddy_health {
-		opacity: 0;
-	}
-	.taddy__hurt {
-		opacity: 1;
-	}
+ .taddy_health {
+  opacity: 0;
+}
+.taddy__hurt {
+  opacity: 1;
+}
 }
 
 .decorations {
-	&__tree {
-		position: absolute;
-		z-index: 10;
-		width: 77vw;
-		top: 14vw;
-		right: -59vw;
-	}
-	&__branch {
-		position: absolute;
-		width: 63vw;
-		top: 92vw;
-		left: -46vw;
-		z-index: 10;
-	}
-	&__sandbox {
-		position: absolute;
-		transform: scale(-1, 1);
-		filter: FlipH;
-		top: 107vw;
-		width: 31vw;
-		right: -18vw;
-		z-index: 15;
-	}
-	&__grass {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-	}
-	&__swing {
-		top: 86vw;
-		right: -25vw;
-		width: 62vw;
-		position: absolute;
-		z-index: 10;
-	}
+  &__tree {
+    position: absolute;
+    width: 76%;
+    right: -61%;
+    top: 23%;
+  }
+  &__branch {
+    position: absolute;
+    width: 66%;
+    left: -49%;
+    top: 51%;
+    z-index: 20;
+  }
+  &__sandbox {
+    position: absolute;
+    width: 33%;
+    right: -20%;
+    top: 60%;
+    transform: scale(-1, 1);
+    filter: FlipH;
+    z-index: 20;
+  }
+  &__grass {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  &__swing {
+    top: 48%;
+    right: -25%;
+    width: 62%;
+    position: absolute;
+    z-index: 10;
+  }
 }
 
 #viruses {
-	list-style: none;
+ list-style: none;
+ position: absolute;
+ height: 100%;
+ width: 100%;
+ top: 0;
+ left: 0;
 }
 
 button {
-	position: absolute;
-	bottom: 0;
-	display: none;
+ position: absolute;
+ bottom: 0;
+ display: none;
 }
 
 @media (max-width: 720px) {
-	.container {
-		width: 100%;
-		height: 100vh;
-	}
-	.logo {
-		padding: 15px 0 0 0;
-		margin: 0 auto;
-		width: 52px;
-	}
-	.life {
-		&__list {
-			padding: 0;
-			list-style: none;
-			display: flex;
-			flex-direction: row;
-			position: absolute;
-			left: 15px;
-			top: 0;
-			li {
-				margin-right: 9px;
-				img {
-					width: 7.5vw;
-				}
-			}
-		}
-	}
-	.decorations {
-		&__tree {
-			width: 80vw;
-			right: -60vw;
-			top: 40vw;
-		}
-		&__branch {
-			width: 60vw;
-			left: -43vw;
-			top: 130vw;
-		}
-		&__sandbox {
-			width: 60vw;
-			right: -43vw;
-			top: 130vw;
-		}
-	}
-	.score {
-		border-radius: 3px;
-		width: 85vw;
-		border-radius: 3px;
-		margin-top: 8px;
-		margin-bottom: 42px;
-		&__title {
-			border-radius: 3px 3px 0 0;
-			font-size: 16px;
-			padding: 9px 0;
-		}
-		&__description {
-			font-size: 38px;
-			padding: 8px 0;
-		}
-	}
-	.taddy {
-		&:before {
-			width: 164px;
-			height: 28px;
-		}
-		img {
-			width: 46vw;
-		}
-	}
-	.decorations {
-		&__tree {
-			width: 80vw;
-			right: -60vw;
-			top: 12vw;
-		}
-		&__branch {
-			width: 62vw;
-			left: -45vw;
-			top: 93vw;
-		}
-		&__sandbox {
-			width: 32vw;
-			right: -19vw;
-			top: 108vw;
-		}
-		&__swing {
-			width: 60vw;
-			right: -23vw;
-			top: 86vw;
-		}
-	}
+ .container {
+  width: 100%;
+  height: 100vh;
+}
+.logo {
+  padding: 15px 0 0 0;
+  margin: 0 auto;
+  width: 52px;
+}
+.life {
+  &__list {
+   padding: 0;
+   list-style: none;
+   display: flex;
+   flex-direction: row;
+   position: absolute;
+   left: 15px;
+   top: 0;
+   li {
+    margin-right: 9px;
+    img {
+     width: 7.5vw;
+   }
+ }
+}
+}
+.decorations {
+  &__tree {
+   width: 80vw;
+   right: -60vw;
+   top: 40vw;
+ }
+ &__branch {
+   width: 60vw;
+   left: -43vw;
+   top: 130vw;
+ }
+ &__sandbox {
+   width: 60vw;
+   right: -43vw;
+   top: 130vw;
+ }
+}
+.score {
+  border-radius: 3px;
+  width: 85vw;
+  border-radius: 3px;
+  margin-top: 8px;
+  margin-bottom: 42px;
+  &__title {
+   border-radius: 3px 3px 0 0;
+   font-size: 16px;
+   padding: 9px 0;
+ }
+ &__description {
+   font-size: 38px;
+   padding: 8px 0;
+ }
+}
+.taddy {
+  &:before {
+   width: 164px;
+   height: 28px;
+ }
+ img {
+   width: 46vw;
+ }
+}
+.decorations {
+  &__tree {
+   width: 80vw;
+   right: -60vw;
+   top: 12vw;
+ }
+ &__branch {
+   width: 62vw;
+   left: -45vw;
+   top: 93vw;
+ }
+ &__sandbox {
+   width: 32vw;
+   right: -19vw;
+   top: 108vw;
+ }
+ &__swing {
+   width: 60vw;
+   right: -23vw;
+   top: 86vw;
+ }
+}
 }
