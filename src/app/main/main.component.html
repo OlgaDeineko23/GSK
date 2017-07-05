@@ -1,9 +1,20 @@
-<div>
-  <img>
-  <h1>
-    #Fellbetter
-  </h1>
-  <button [routerLink]="['/menu']">Enter</button>
-  <p>Klikni na obrazovku</p>
+<div class="splash-screen">
+  <app-header></app-header>
 
+
+  <div class="splash-screen__heading">
+    <!--<h1>-->
+      <!--#Fellbetter-->
+    <!--</h1>-->
+  </div>
+
+  <div class="splash-screen__bottom-bg">
+  </div>
+
+  <div class="splash-screen__btn-area">
+    <a href="#" [routerLink]="['/menu']">
+      <img src="../../assets/images/splash-screen__hand.svg" alt="Click it">
+    </a>
+  </div>
 </div>
+

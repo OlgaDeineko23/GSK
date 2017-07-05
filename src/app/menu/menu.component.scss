@@ -1,0 +1,46 @@
+@import "../../assets/styles/utilities/variables";
+@import "../../assets/styles/utilities/mixins";
+
+.home-screen {
+  position: relative;
+  height: 100%;
+
+  &__logo {
+    padding-top: 85px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__btn-area {
+    padding: 0 3.5rem;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 17px;
+    }
+
+    img {
+      margin-right: 20px;
+    }
+  }
+
+  &__footer {
+    @include retina-js("../../assets/images/1.png", 1, auto auto, -330px 4px no-repeat transparent);
+    position: absolute;
+    bottom: 0;
+    height: 90px;
+    width: 257px;
+  }
+}
+
+.footer {
+  padding: 0 20px;
+  margin-top: 49px;
+
+  &__item {
+    font-size: 12px;
+    color: $white;
+  }
+}

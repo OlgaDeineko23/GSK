@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { MainComponent } from './main/main.component';
 import { OchranMacikaResultComponent } from './ochran-macika-result/ochran-macika-result.component';
 import { OchranMacikaGameComponent } from './ochran-macika-game/ochran-macika-game.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { OchranMacikaGameComponent } from './ochran-macika-game/ochran-macika-ga
     OchranMacikaComponent,
     MainComponent,
     OchranMacikaResultComponent,
-    OchranMacikaGameComponent
+    OchranMacikaGameComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

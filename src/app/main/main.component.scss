@@ -1,6 +1,45 @@
 @import "../../assets/styles/utilities/variables";
+@import "../../assets/styles/utilities/mixins";
 
-h1  {
-  font-family: $font-sugarstyle-millenial;
-  font-size: 30rem;
+.splash-screen {
+  overflow: hidden;
+
+  &__logo-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__logo {
+    width: 35.5rem;
+    height: 30.6rem;
+  }
+
+  &__heading {
+    text-align: center;
+    transform: rotate(-13.2deg);
+  }
+
+  &__bottom-bg {
+    //@include retina-js("../../assets/images/splash-screen__bottom-figure.png", 2, 867px 383px, left top no-repeat transparent);
+    //float: left;
+    //width: 867px;
+    //height: 383px;
+  }
+
+  &__btn-area {
+
+  }
+
+  h1 {
+    font-family: $font-sugarstyle-millenial;
+    font-size: 300px;
+    background: $red-yellow-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $cinnabar;
+    margin: 0;
+  }
 }

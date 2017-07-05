@@ -1,3 +1,39 @@
-<button [routerLink]="['/anatomia-chorob']">Anatomia chorob</button>
-<button [routerLink]="['/kalendar-ockovania']">Kalendar ockovania</button>
-<button [routerLink]="['/ochran-macika']">Ochran macika(hra)</button>
+<div class="home-screen">
+  <div class="home-screen__header">
+    <app-header></app-header>
+  </div>
+
+
+  <div class="home-screen__logo">
+    <img src="../../assets/images/hash-logo.png"
+         srcset="../../assets/images/hash-logo@2x.png 2x,
+					 ../../assets/images/hash-logo@3x.png 3x"
+         class="logo">
+  </div>
+
+  <div class="home-screen__btn-area">
+    <button [routerLink]="['/anatomia-chorob']" class="btn">
+      <img src="../../assets/images/anatomia.svg"
+           class="anatomy">
+      <span>Anatomia chorob</span>
+    </button>
+    <button [routerLink]="['/kalendar-ockovania']" class="btn">
+      <img src="../../assets/images/kalendar.svg"
+           class="calendar">
+      <span>Kalendar ockovania</span>
+    </button>
+    <button [routerLink]="['/ochran-macika']" class="btn">
+      <img src="../../assets/images/ochran.svg"
+           class="ochran">
+      <span>Ochran macika(hra)</span>
+    </button>
+  </div>
+
+  <footer class="home-screen__footer">
+    <div class="footer">
+      <div class="footer__item">SK/VGU/0004/17b</div>
+      <div class="footer__item">Dátum prípravy: Júl 2017</div>
+    </div>
+  </footer>
+</div>
+

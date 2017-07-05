@@ -1,0 +1,19 @@
+@import "../../assets/styles/utilities/variables";
+@import "../../assets/styles/utilities/mixins";
+
+.header {
+  @include retina-js("../../assets/images/2.png", 1, auto auto, -180px -842px no-repeat transparent);
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  height: 69px;
+  width: 100%;
+
+  &__logo {
+    margin-top: 15px;
+    height: 45px;
+    width: 52px;
+  }
+}
