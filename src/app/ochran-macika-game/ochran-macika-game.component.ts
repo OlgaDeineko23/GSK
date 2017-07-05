@@ -12,7 +12,7 @@ export class OchranMacikaGameComponent implements OnInit {
 
   ngOnInit() {$(document).ready(function() {
 
-    /* Center on screen */
+/* Center on screen */
 
     var centerX = Math.round($('.taddy').offset().left + $('.taddy').width() / 2);
     var centerY = Math.round($('.taddy').offset().top + $('.taddy').height() / 2);
@@ -22,39 +22,46 @@ export class OchranMacikaGameComponent implements OnInit {
       centerY = Math.round($('.taddy').offset().top + $('.taddy').height() / 2);
     });
 
-    function Virus(x, y) {
+    function randomInteger(min, max) {
+      var rand = min - 0.5 + Math.random() * (max - min + 1)
+      rand = Math.round(rand);
+      return rand;
+    }
+
+    function Virus(x, y, url, size) {
       this.x = x;
       this.y = y;
+      this.url = url;
+      this.size = size;
     }
 
     var virusType = 0;
 
     setInterval(function() {
       virusType++;
+      var randomImage: any = randomInteger(1, 6);
+      var randomSize: any = randomInteger(6, 12);
+      randomImage = 'assets/images/virus' + randomImage + '.svg';
+      randomSize = randomSize + '%';
       if (virusType % 2 > 0) {
         var x = Math.round(Math.random() * $('body').width());
         if (Math.round(Math.random()) > 0) {
-          var virus = new Virus(x, $('body').height());
+          var virus = new Virus(x, $('body').height(), randomImage, randomSize);
         } else {
-          var virus = new Virus(x, 0);
+          var virus = new Virus(x, 0, randomImage, randomSize);
         }
       } else {
         var y = Math.round(Math.random() * $('body').height());
-        var virus = new Virus(0, y);
+        var virus = new Virus(0, y, randomImage, randomSize);
         if (Math.round(Math.random()) > 0) {
-          var virus = new Virus($('body').width(), y);
+          var virus = new Virus($('body').width(), y, randomImage, randomSize);
         } else {
-          var virus = new Virus(0, y);
+          var virus = new Virus(0, y, randomImage, randomSize);
         }
       }
-      var html = '<li class="virus" style="position: absolute; width: 5%; left:' + virus.x + 'px; top:' + virus.y + 'px; z-index: 200;"><img src="assets/images/virus.svg" alt="Virus"></li></li>';
+      var html = '<li class="virus" style="position: absolute; width: ' + virus.size + '; left:' + virus.x + 'px; top:' + virus.y + 'px; z-index: 200;"><img src="' + virus.url + '" alt="Virus"></li></li>';
       $('#viruses').append(html);
     }, 2000);
-
-    var headStartX = $('.taddy__head').offset().left;
-    var headEndX = $('.taddy__head').offset().left + $('.taddy__head').width();
-    var headStartY = $('.taddy__head').offset().top;
-    var headEndY = $('.taddy__head').offset().top + $('.taddy__head').height();
 
     function HitBox(obj) {
       this.startX = $(obj).offset().left;
@@ -93,9 +100,9 @@ export class OchranMacikaGameComponent implements OnInit {
           }, 600);
           $(el).remove();
         }
-        /*		if ($('.life__list .life__full').length == 0) {
-         $('button').trigger('click');
-         }*/
+        if ($('.life__list .life__full').length == 0) {
+          $('button').trigger('click');
+        }
       });
     }, 10);
 
@@ -112,6 +119,7 @@ export class OchranMacikaGameComponent implements OnInit {
         $('#total-score').text(score);
       }
     });
+
   });
 
   }
