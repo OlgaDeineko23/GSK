@@ -1,21 +1,20 @@
 $(document).ready(function() {
 
+	/* Center on screen */
+
+	var centerX = $(window).width() / 2;
+	var centerY = $(window).height() / 2;
+
+	$(window).on('resize', function() {
+		centerX = $(window).width() / 2;
+		centerY = $(window).height() / 2;
+	});
+
 	function Virus() {
 		this.x = Math.round(Math.random() * $(window).width());
 		this.y = Math.round(Math.random() * $(window).height());
 		this.speed = 0;
 	}
-
-function center() {
-	var x = $(window).width() / 2;
-	var y = $(window).height() / 2;
-	console.log(x, y);
-}
-
-var center();
-$(window).on('resize', function() {
-	center();
-});
 
 	setInterval(function() {
 		var virus = new Virus();
@@ -23,8 +22,8 @@ $(window).on('resize', function() {
 		$('#viruses').append(html);
 	}, 3000);
 
-$('#viruses').click(function(event) {
-	event.target.parentNode.remove();
-});
+	$('#viruses').click(function(event) {
+		event.target.parentNode.remove();
+	});
 
 });
