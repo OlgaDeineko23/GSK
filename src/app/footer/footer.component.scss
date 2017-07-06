@@ -8,4 +8,14 @@
   width: 100%;
   position: absolute;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    font-size: 16px;
+    color: $white;
+    text-decoration: underline;
+    text-transform: capitalize;
+  }
 }
