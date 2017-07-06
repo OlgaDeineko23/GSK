@@ -1,3 +1,30 @@
+@import "../../assets/styles/utilities/variables";
+
 .heading {
   padding-top: 102px;
+  margin-bottom: 71px;
+}
+
+.calendar {
+
+  &__form {
+    padding: 0 43px;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 1.38;
+    text-align: center;
+    color: $warm-grey;
+    padding: 0 28px;
+  }
+
+  &__select {
+    margin-top: 36px;
+    margin-bottom: 24px;
+  }
+
+  .btn {
+    width: 100%;
+  }
 }

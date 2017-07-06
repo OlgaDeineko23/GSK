@@ -1,0 +1,40 @@
+.select {
+  display: flex;
+  flex-direction: row;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  &__item {
+    width: 100%;
+    display: block;
+    height: 52px;
+    font-size: 16px;
+    color: $brown-grey;
+    line-height: 1.42857143;
+    background-color: #fff;
+    background-image: none;
+    border: none;
+    border-radius: 4px;
+    appearance: none;
+    padding: 0 52px 0 20px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__addon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #ef451f, #fcdd57);
+    width: 52px;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    height: 52px;
+  }
+
+}
