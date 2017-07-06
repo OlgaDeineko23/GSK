@@ -212,7 +212,7 @@ button {
   display: none;
 }
 
-@media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) and (min-width: 1040px) {
+@media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
   .score {
     width: 40%;
     margin: 11rem auto 4.2rem auto;
@@ -286,5 +286,51 @@ button {
     padding: 0;
     font-size: 2.2rem;
     bottom: 3.5%;
+  }
+}
+
+@media (min-height: $xl-breakpoint) {
+  .life {
+    &__list {
+      li {
+        margin-right: 17px;
+        img {
+          width: 46px;
+        }
+      }
+      top: 3%;
+      left: 5%;
+    }
+  }
+  .taddy {
+    top: 37%;
+    width: 46%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    &:before {
+      width: 93%;
+      height: 10%;
+     bottom: -26px;
+    }
+  }
+  .score {
+    width: 44%;
+    margin-top: 29rem;
+    border-radius: 8px;
+    &__title {
+      border-radius: 8px 8px 0 0;
+      font-size: 2rem;
+      padding: 20px 0;
+    }
+    &__description {
+      font-size: 10rem;
+      padding: 26px 0;
+    }
+  }
+  .decorations {
+    &__tree {
+      right: -58%;
+    }
   }
 }

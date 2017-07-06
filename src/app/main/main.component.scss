@@ -1,6 +1,15 @@
 @import "../../assets/styles/utilities/variables";
 @import "../../assets/styles/utilities/mixins";
 
+    @keyframes: shine 1s linear infinity {
+      from {
+        background-position: 0 center;
+      }
+    to {
+      background-position: 200% center;
+    }
+  }
+
 .splash-screen {
   position: relative;
   height: 100%;
@@ -78,11 +87,18 @@
 
   h1 {
     font-family: $font-sugarstyle-millenial;
-    font-size: 300px;
+    font-size: 13rem;
     background: $red-yellow-gradient;
+    background-position: 0 center;
+    background-size: 200% auto;
+    text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: $cinnabar;
     margin: 0;
+    animation: shine 1s linear infinite;
+    }
+  h2 {
+
   }
 }
