@@ -19,17 +19,17 @@ export class KalendarOckovaniaComponent implements OnInit {
 
   ngOnInit() {
     this.fullYear = new Date().getFullYear();
-    var range = [];
+    const range = [];
 
 
-    for (var i = 0; i <= 67; i++) {
+    for (let i = 0; i <= 67; i++) {
       range.unshift(this.fullYear - i);
     }
 
     this.years = range;
   }
 
-  toNumber() {
+  toNumber(): void {
     this.circleYear = +this.yearControl.value;
   }
 }

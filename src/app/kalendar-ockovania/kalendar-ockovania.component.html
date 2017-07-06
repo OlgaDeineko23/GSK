@@ -12,20 +12,27 @@
       </div>
     </div>
 
-    <p class="calendar__description" [hidden]="yearControl.value">
+    <p class="calendar__description" [hidden]="yearSelectForm.submitted">
       Pozrite si zoznam očkovaní, ktoré by ste vy alebo vaše dieťa mali tento
       rok
       absolvovať.
     </p>
-    <form action="" class="calendar__form">
+
+    <form action="" class="calendar__form" #yearSelectForm="ngForm">
       <div class="calendar__select">
         <div class="select">
-          <select class="select__item" #yearSelect [formControl]="yearControl"
-                  ([NgModel])="yearSelect.value" (change)="toNumber()" required>
-            <option *ngFor="let year of years" [value]="year"
+          <select class="select__item"
+                  [formControl]="yearControl"
+                  ([NgModel])="yearControl.value"
+                  (change)="toNumber()"
+                  required>
+
+            <option *ngFor="let year of years"
+                    [value]="year"
                     [selected]="fullYear">
               {{year}}
             </option>
+
           </select>
           <span class="select__addon">
         <img src="../../assets/images/arrow.svg"
@@ -34,15 +41,16 @@
         </div>
       </div>
 
-      <div class="calendar__btn" [hidden]="yearControl.value">
+      <div class="calendar__btn" [hidden]="yearSelectForm.submitted">
         <button class="btn btn--gradient" type="submit">
           Pokračovať
         </button>
       </div>
     </form>
+
   </div>
 
-  <div class="calendar__calendar" [hidden]="!yearControl.value">
+  <div class="calendar__calendar" [hidden]="!yearSelectForm.submitted">
 
     <!-- BEGIN Calendar-->
     <div class="section">
@@ -55,7 +63,8 @@
             <ul class="calbox">
               <li>
                 <div class="br">
-                  <strong>Záškrt, tetanus,<br>čieny kašeľ,<br>Vírusová hepatitída B</strong>
+                  <strong>Záškrt, tetanus,<br>čieny kašeľ,<br>Vírusová
+                          hepatitída B</strong>
                 </div>
                 <div class="pt bt"></div>
                 <div>V 3. mesiaci života<br>
