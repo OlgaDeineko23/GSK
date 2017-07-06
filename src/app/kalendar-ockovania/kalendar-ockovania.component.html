@@ -20,7 +20,7 @@
     <form action="" class="calendar__form" #formYear="ngForm">
       <div class="calendar__select">
         <div class="select">
-          <select class="select__item" [formControl]="yeaControl" [NgModel]="selectedValue" required>
+          <select class="select__item" [formControl]="yeaControl" [(ngModel)]="selectedValue" required>
             <option *ngFor="let year of years" [selected]="fullyear">
               {{year}}
             </option>
