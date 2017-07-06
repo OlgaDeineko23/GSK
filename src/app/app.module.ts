@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+//Bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+// Components
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { AnatomiaChorobComponent } from './anatomia-chorob/anatomia-chorob.component';
@@ -29,7 +33,8 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

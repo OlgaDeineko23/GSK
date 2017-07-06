@@ -13,18 +13,27 @@
 
   <div class="disease__description">
     <p>
-      <strong>Kliknite na časti tela</strong> a zistite, aké ochorenia vás a vaše deti
-       ohrozujú.
+      <strong>Kliknite na časti tela</strong> a zistite, aké ochorenia vás a
+                                              vaše deti
+                                              ohrozujú.
     </p>
 
     <p>
       Akékoľkovek otázky týkajúce sa príslušného ochorenia
-       alebo spôsobu jeho liečby je potrebnékonzultovaťs ošetrujúcim lekárom
-       Kontakt pre prípad hlásenia nežiaducich účinkov: sk-safety@gsk.com
+      alebo spôsobu jeho liečby je potrebnékonzultovaťs ošetrujúcim lekárom
+      Kontakt pre prípad hlásenia nežiaducich účinkov: sk-safety@gsk.com
     </p>
   </div>
 
   <div class="disease__anatomy">
+    <span class="disease-dot"
+          [ngClass]="popover.isOpen()?'disease-dot--active':''"
+          placement="right"
+          ngbPopover="Postupne sa objavujú bolestivé kŕče celého tela, pri ktorých stúpa teplota. Pacient je pri plnom vedomí a príčinou smrti je väčšinou udusenie."
+          popoverTitle="Tetanus"
+          #popover="ngbPopover"
+          #p="ngbPopover" (document:click)="p.close()" (click)="$event.stopPropagation()">
+    </span>
     <img src="../../assets/images/women.png"
          srcset="../../assets/images/women@2x.png 2x,
 					 ../../assets/images/women@3x.png 3x"

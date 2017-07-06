@@ -1,0 +1,28 @@
+.disease-dot {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #15a6af;
+  border: solid 2.4px $white;
+  position: relative;
+  z-index: 1061;
+
+  &--active {
+    width: 14.8px;
+    height: 14.8px;
+    background-color: #ee6800;
+    border: solid 2.4px $white;
+
+    &::after {
+      content: 'x';
+      display: block;
+      position: absolute;
+      font-size: 9px;
+      color: $white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
