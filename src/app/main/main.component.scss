@@ -1,15 +1,6 @@
 @import "../../assets/styles/utilities/variables";
 @import "../../assets/styles/utilities/mixins";
 
-    @keyframes: shine 1s linear infinity {
-      from {
-        background-position: 0 center;
-      }
-    to {
-      background-position: 200% center;
-    }
-  }
-
 .splash-screen {
   position: relative;
   height: 100%;
@@ -97,7 +88,7 @@
     color: $cinnabar;
     margin: 0;
     animation: shine 1s linear infinite;
-    }
+  }
   h2 {
 
   }

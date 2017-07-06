@@ -3,24 +3,58 @@
 
   &__text,
   &__substrate {
-    background-image: linear-gradient(to right, #ef451f, #fcdd57), linear-gradient($tomato, $tomato);
+    background-image: linear-gradient(to right, rgb(239, 69, 31), rgb(252, 221, 87)), linear-gradient($tomato, $tomato);
+    font-family: $font-arial;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent
+    -webkit-text-fill-color: transparent;
+
+    @media (min-width: 768px) {
+      font-size: 52px;
+    }
+
+    @media (min-width: 1080px) {
+      font-size: 100px;
+      font-weight: bold;
+      text-align: center;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   &__substrate {
+    background-image: linear-gradient(to right, rgb(239, 69, 31), rgb(252, 221, 87)), linear-gradient($greyish-10, $greyish-10);
     font-family: $font-sugarstyle-millenial;
     font-size: 83.1px;
     opacity: 0.1;
-    font-weight: normal;
-    transform: rotate(-13.2deg);
+    transform: rotate(-7deg);
     position: absolute;
     top: 62%;
     left: 0;
     right: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media (min-width: 768px) {
+      font-size: 155px;
+      top: 52%;
+    }
+
+    @media (min-width: 1080px) {
+      opacity: 0.1;
+      font-size: 280.2px;
+      top: 57%;
+    }
   }
 }

@@ -3,12 +3,27 @@
 .heading {
   padding-top: 102px;
   margin-bottom: 71px;
+
+  @media (min-width: 768px) {
+    padding-top: 200px;
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: 1080px) {
+    padding-top: 404px;
+    margin-bottom: 120px;
+  }
 }
 
 .calendar {
 
   &__form {
     padding: 0 43px;
+
+    @media (max-width: 768px) {
+      max-width: 329px;
+      margin: 0 auto;
+    }
   }
 
   &__description {
@@ -17,25 +32,71 @@
     text-align: center;
     color: $warm-grey;
     padding: 0 28px;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+      line-height: 1.3;
+      text-align: center;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1080px) {
+      font-size: 30px;
+      max-width: 630px;
+      margin: 0 auto;
+    }
   }
 
   &__select {
     margin-top: 36px;
     margin-bottom: 24px;
+
+    @media (min-width: 768px) {
+      margin-top: 90px;
+    }
+
+    @media (min-width: 1080px) {
+      margin-top: 165px;
+      margin-bottom: 80px;
+    }
   }
 
   .btn {
     width: 100%;
+
+    @media (min-width: 768px) {
+
+    }
+
+    @media (min-width: 1080px) {
+      background-image: linear-gradient(to right, rgb(239, 69, 31), rgb(252, 221, 87));
+      border-radius: 20px;
+      height: 174px;
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+      color: $white-two;
+    }
   }
 
   &__calendar {
     overflow: scroll;
     height: calc(568px - 279px);
+
+    @media (min-width: 768px) {
+      height: calc(1024px - 394px);
+    }
+
+    @media (min-width: 1080px) {
+      height: calc(1920px - 843px);
+    }
   }
 
   /deep/ .footer {
     z-index: 2;
   }
+
 }
 
 // TODO: refactor it from main project
@@ -82,6 +143,14 @@
 
     &.main {
       margin-bottom: 140px;
+
+      @media (min-width: 768px) {
+
+      }
+
+      @media (min-width: 1080px) {
+        margin-bottom: 300px;
+      }
     }
 
     li {

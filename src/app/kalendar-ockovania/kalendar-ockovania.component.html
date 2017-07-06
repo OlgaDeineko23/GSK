@@ -27,9 +27,10 @@
                   (change)="toNumber()"
                   required>
 
+            <option value="" selected hidden>Rok narodenia</option>
+
             <option *ngFor="let year of years"
-                    [value]="year"
-                    [selected]="fullYear">
+                    [value]="year">
               {{year}}
             </option>
 

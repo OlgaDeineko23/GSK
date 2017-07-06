@@ -17,9 +17,9 @@
     height: 127px;
   }
 
-  @media (min-width: 1919px) {
-    @include retina-js("../../assets/images/1-hd.png", 1, auto auto, -720px 4px no-repeat transparent);
-    height: 127px;
+  @media (min-width: 1080px) {
+    @include retina-js("../../assets/images/1-hd.png", 1, auto auto, -2300px 0 no-repeat transparent);
+    height: 215px;
   }
 
   a {
@@ -28,5 +28,13 @@
     color: $white;
     text-decoration: underline;
     text-transform: capitalize;
+
+    @media (min-width: 768px) {
+      font-size: 22px;
+    }
+
+    @media (min-width: 1080px) {
+      font-size: 40px;
+    }
   }
 }
