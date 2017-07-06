@@ -1,137 +1,143 @@
 @import "../../assets/styles/utilities/variables";
 
 * {
-	font-family: 'Arial';
+  font-family: 'Arial';
 }
 
 .start-game {
-	position: relative;
-	overflow: hidden;
-	height: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
 }
 
 .page-bg {
-	position: absolute;
-	left: 0px;
-	top: -396px;
-	width: 532px;
-	height: 457px;
+  position: absolute;
+  left: 0px;
+  top: -396px;
+  width: 532px;
+  height: 457px;
 }
 
 .container {
-	width: 100%;
+  height: 100%;
+  width: 100%;
 }
+
 .logo {
-	padding: 15px 0 31px 0;
-	margin: 0 auto;
-	width: 52px;
-	position: relative;
-	z-index: 20;
+  padding: 15px 0 31px 0;
+  margin: 0 auto;
+  width: 52px;
+  position: relative;
+  z-index: 20;
 }
-h1  {
-	position: absolute;
-	left: 50%;
-	font-family: $font-sugarstyle-millenial;
-	font-size: 8.3rem;
-	color: rgb(240, 89, 38);
-	opacity: 0.1;
-	transform: translateX(-50%);
-	margin: 0;
-	top: 8rem;
-	font-weight: lighter;
+
+h1 {
+  position: absolute;
+  left: 50%;
+  font-family: $font-sugarstyle-millenial;
+  font-size: 8.3rem;
+  color: rgb(240, 89, 38);
+  opacity: 0.1;
+  transform: translateX(-50%);
+  margin: 0;
+  top: 8rem;
+  font-weight: lighter;
 }
 
 .page-title {
-	font-weight: bold;
-	color: rgb(240, 89, 38);
-	text-align: center;
-	font-size: 6rem;
-	margin: 0;
-	padding: 0;
+  font-weight: bold;
+  color: rgb(240, 89, 38);
+  text-align: center;
+  font-size: 6rem;
+  margin: 0;
+  padding: 0;
 }
 
 .page-description {
-	color: #9d9d9d;
-	text-align: center;
-	font-size: 1.6rem;
-	line-height: 2.2rem;
-	margin: 2.2rem 0 2.2rem 0;
-	padding: 0 3rem;
-	strong {
-		color: #F1642A;
-		font-weight: bold;
-	}
+  color: #9d9d9d;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  margin: 2.2rem 0 2.2rem 0;
+  padding: 0 3rem;
+  strong {
+    color: #F1642A;
+    font-weight: bold;
+  }
 }
 
 .taddy {
-	margin: 0 auto;
-	width: 55%;
-	position: relative;
-	z-index: 20;
-	&:before {
-		width: 164px;
-		height: 28px;
-	}
+  margin: 0 auto;
+  width: 55%;
+  position: relative;
+  z-index: 20;
+  &:before {
+    width: 164px;
+    height: 28px;
+  }
 }
+
 button {
-	background-image: linear-gradient( 86deg, rgb(239,69,31) 0%, rgb(252,221,87) 100%);
-	position: absolute;
-	border: none;
-	border-radius: 5px;
-	transform: rotate(11deg);
-	font-size: 20px;
-	font-weight: bold;
-	color: #FFF;
-	width: 22rem;
-	left: -11%;
-	top: 48%;
-	height: 4.8rem;
+  background-image: linear-gradient(86deg, rgb(239, 69, 31) 0%, rgb(252, 221, 87) 100%);
+  position: absolute;
+  border: none;
+  border-radius: 5px;
+  transform: rotate(11deg);
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFF;
+  width: 22rem;
+  left: -11%;
+  top: 48%;
+  height: 4.8rem;
 }
+
 .back-page {
-	font-size: 1.6rem;
-	color: #FFF;
-	background: none;
-	border: none;
-	text-align: center;
-	text-decoration: underline;
-	position: absolute;
-	top: auto;
-	left: auto;
-	font-weight: normal;
-	bottom: 0;
-	z-index: 20;
-	left: 50%;
-	transform: translateX(-50%);
-	width: auto;
-	padding: 0;
+  font-size: 1.6rem;
+  color: #FFF;
+  background: none;
+  border: none;
+  text-align: center;
+  text-decoration: underline;
+  position: absolute;
+  top: auto;
+  left: auto;
+  font-weight: normal;
+  bottom: 0;
+  z-index: 20;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  padding: 0;
 }
+
 .decorations {
-	&__tree {
-		position: absolute;
-		width: 76%;
-		right: -61%;
-		top: 23%;
-	}
-	&__branch {
-		position: absolute;
-		width: 70%;
-		left: -56%;
-		top: 61%;
-		z-index: 20;
-	}
-	&__sandbox {
-		position: absolute;
-		width: 50%;
-		right: -30%;
-		top: 71%;
-		transform: scale(-1, 1);
-		filter: FlipH;
-		z-index: 20;
-	}
-	&__grass {
-		position: absolute;
-		width: 100%;
-		bottom: 0;
-		left: 0;
-	}
+  &__tree {
+    position: absolute;
+    width: 76%;
+    right: -61%;
+    top: 23%;
+  }
+  &__branch {
+    position: absolute;
+    width: 70%;
+    left: -56%;
+    top: 61%;
+    z-index: 20;
+  }
+  &__sandbox {
+    position: absolute;
+    width: 50%;
+    right: -30%;
+    top: 71%;
+    transform: scale(-1, 1);
+    filter: FlipH;
+    z-index: 20;
+  }
+  &__grass {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
 }
