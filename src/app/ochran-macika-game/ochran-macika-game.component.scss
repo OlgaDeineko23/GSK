@@ -80,6 +80,9 @@
   &__description {
     font-size: 38px;
     color: rgb(238, 104, 0);
+    background-image: linear-gradient(90deg,#ef451f,#fcdd57),linear-gradient(#f05926,#f05926);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     padding: 8px 0;
     text-align: center;
     margin: 0;
