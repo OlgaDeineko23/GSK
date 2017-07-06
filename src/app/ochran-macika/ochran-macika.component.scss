@@ -1,13 +1,22 @@
 @import "../../assets/styles/utilities/variables";
+@import "../../assets/styles/utilities/mixins";
 
 * {
   font-family: 'Arial';
+}
+
+header {
+  z-index: 20;
 }
 
 .start-game {
   position: relative;
   overflow: hidden;
   height: 100%;
+}
+
+.page {
+  padding-top: 9.4rem;
 }
 
 .page-bg {
@@ -33,23 +42,23 @@
 
 h1 {
   position: absolute;
-  left: 50%;
+  left: 52%;
   font-family: $font-sugarstyle-millenial;
-  font-size: 8.3rem;
+  font-size: 9.2rem;
   color: rgb(240, 89, 38);
   opacity: 0.1;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(-8deg);
   margin: 0;
-  top: 8rem;
+  top: 7rem;
   font-weight: lighter;
 }
 
 .page-title {
   font-weight: bold;
   color: rgb(240, 89, 38);
-      background-image: linear-gradient(90deg,#ef451f,#fcdd57),linear-gradient(#f05926,#f05926);
-          -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(0,#ef451f,#fcdd57),linear-gradient(#f05926,#f05926);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
   font-size: 3rem;
   margin: 0;
@@ -62,7 +71,7 @@ h1 {
   font-size: 1.6rem;
   line-height: 2.2rem;
   margin: 3rem 0 2.2rem 0;
-  padding: 0 3rem;
+  padding: 0 2rem;
   strong {
     color: #F1642A;
     font-weight: bold;
@@ -72,27 +81,39 @@ h1 {
 .taddy {
   margin: 0 auto;
   width: 55%;
-  position: relative;
+  left: 49%;
+  top: 38%;
+  transform: translateX(-50%);
+  position: absolute;
   z-index: 20;
   &:before {
+    content: "";
+    background-color: #000;
+    opacity: 0.1;
     width: 164px;
     height: 28px;
+    position: absolute;
+    bottom: -10px;
+    left: 53%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: -1;
   }
 }
 
-button {
-  background-image: linear-gradient(86deg, rgb(239, 69, 31) 0%, rgb(252, 221, 87) 100%);
+.button {
+  background-image: linear-gradient(-58deg, rgb(239, 69, 31) -70%, rgb(252, 221, 87) 100%);
   position: absolute;
   border: none;
   border-radius: 5px;
-  transform: rotate(11deg);
-  font-size: 20px;
+  transform: rotate(10deg);
+  font-size: 2rem;
   font-weight: bold;
   color: #FFF;
-  width: 22rem;
+  width: 124%;
   left: -11%;
-  top: 48%;
-  height: 4.8rem;
+  top: 49%;
+  height: 18%;
   cursor: pointer;
   outline: none;
 }
@@ -108,7 +129,7 @@ button {
   top: auto;
   left: auto;
   font-weight: normal;
-  bottom: 0;
+  bottom: 2.5%;
   z-index: 20;
   left: 50%;
   transform: translateX(-50%);
@@ -144,5 +165,111 @@ button {
     width: 100%;
     bottom: 0;
     left: 0;
+  }
+}
+
+@media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) and (min-width: 1040px) {
+  .page {
+    padding-top: 19.4rem;
+  }
+  h1 {
+    font-size: 17.5rem;
+    transform: translateX(-50%) rotate(-14deg);
+    top: 12rem;
+    left: 50%;
+  }
+  .page-title {
+    font-size: 5.2rem;
+  }
+  .page-description {
+    line-height: 2.6rem;
+    font-size: 2rem;
+    margin: 7rem 0 2.2rem 0;
+    padding: 0 28%;
+  }
+  .taddy {
+    width: 37%;
+    left: 50%;
+    top: 41%;
+    &:before {
+      bottom: -1rem;
+      left: 56%;
+      width: 89%;
+      height: 9%;
+    }
+  }
+  .button {
+    font-size: 3.2rem;
+    width: 118%;
+    left: -7%;
+    top: 48%;
+    height: 17%;
+    border-radius: 1.2rem;
+  }
+  .decorations {
+    &__branch {
+      width: 45%;
+      left: -32%;
+      top: 63%;
+    }
+    &__grass {
+      bottom: -2.5rem;
+    }
+    &__tree {
+      width: 63%;
+      right: -49%;
+      top: 21%;
+    }
+    &__sandbox {
+      width: 35%;
+      right: -20%;
+      top: 68%;
+    }
+  }
+  .back-page {
+    font-size: 2.2rem;
+    bottom: 3.5%;
+  }
+}
+
+@media (min-height: $xl-breakpoint) {
+  .page {
+    padding-top: 34.4rem;
+  }
+  h1 {
+    font-size: 28.2rem;
+    top: 14%;
+  }
+  .page-title {
+    font-size: 10rem;
+  }
+  .page-description {
+    font-size: 4rem;
+    line-height: 5rem;
+    margin: 8% 0 0 0;
+    padding: 0 21%;
+  }
+  .taddy {
+    &:before {
+      width: 89%;
+      height: 11%;
+      border: -49px;
+      left: 56%;
+    }
+  }
+  .decorations {
+    &__tree {
+      width: 76%;
+      right: -59%;
+      top: 18%;
+    }
+  }
+  .button {
+    border-radius: 15px;
+    font-size: 5.4rem;
+  }
+  .back-page {
+    font-size: 4rem;
+    bottom: 2.8%;
   }
 }

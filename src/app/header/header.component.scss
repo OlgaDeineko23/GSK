@@ -10,6 +10,7 @@
   justify-content: center;
   height: 69px;
   width: 100%;
+  z-index: 5;
 
   @media (min-width: 768px) {
     @include retina-js("../../assets/images/1-md.png", 1, auto auto, -575px -2075px no-repeat transparent);
@@ -33,6 +34,14 @@
     }
 
     @media (min-width: 1079px) {
+      display: none;
+    }
+  }
+}
+
+@media (min-height: $xl-breakpoint) {
+  .header {
+    &__logo {
       display: none;
     }
   }

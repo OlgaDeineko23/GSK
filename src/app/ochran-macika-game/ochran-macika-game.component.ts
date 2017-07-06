@@ -14,8 +14,8 @@ export class OchranMacikaGameComponent implements OnInit {
 
     /* Game config */
 
-    var maxSpeed = 3500;
-    var minSpeed =  2500;
+    var maxSpeed = 5000;
+    var minSpeed =  4000;
     var timeCreat = 870;
     var animateSpeed = 20;
 
@@ -102,7 +102,7 @@ export class OchranMacikaGameComponent implements OnInit {
         if ($('.life__list .life__full').length == 0) {
           clearInterval(create);
           clearInterval(move);
-          $('button').trigger('click');
+          $('.finish-game').trigger('click');
           setTimeout(function() {
             $('#total-viruses').text(score);
           }, 150);

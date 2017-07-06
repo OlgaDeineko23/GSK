@@ -1,4 +1,5 @@
 @import "../../assets/styles/utilities/variables";
+@import "../../assets/styles/utilities/mixins";
 
 .page-bg {
   position: absolute;
@@ -21,8 +22,9 @@
 
 .container {
   width: 100%;
-  margin: 0 auto;
   height: 100%;
+  margin: 0 auto;
+  padding: 6.2rem 0 0 0;
 }
 
 * {
@@ -80,7 +82,7 @@
   &__description {
     font-size: 38px;
     color: rgb(238, 104, 0);
-    background-image: linear-gradient(90deg,#ef451f,#fcdd57),linear-gradient(#f05926,#f05926);
+    background-image: linear-gradient(0,#ef451f,#fcdd57),linear-gradient(#f05926,#f05926);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 8px 0;
@@ -93,7 +95,7 @@
   position: relative;
   z-index: 100;
   text-align: center;
-  width: 47%;
+  width: 48%;
   margin: 0 auto;
   &__head {
     position: absolute;
@@ -133,8 +135,8 @@
     content: "";
     background-color: #000;
     opacity: 0.1;
-    width: 164px;
-    height: 28px;
+    width: 136px;
+    height: 25px;
     position: absolute;
     bottom: -10px;
     left: 53%;
@@ -189,6 +191,10 @@
     position: absolute;
     z-index: 10;
   }
+  &__cloud {
+    position: absolute;
+    left: -9999px;
+  }
 }
 
 #viruses {
@@ -204,4 +210,81 @@ button {
   position: absolute;
   bottom: 0;
   display: none;
+}
+
+@media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) and (min-width: 1040px) {
+  .score {
+    width: 40%;
+    margin: 11rem auto 4.2rem auto;
+    font-size: 2rem;
+    &__title {
+      font-size: 2rem;
+      padding: 1.2rem 0;
+    }
+    &__description {
+      font-size: 5.2rem;
+      padding: 2rem;
+    }
+  }
+  .taddy {
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    width: 36%;
+    transform: translateX(-50%);
+  }
+  .life {
+    &__list {
+      left: 5%;
+      top: 3.2%;
+      margin-right: 15px;
+      li {
+        img {
+          width: 40px;
+        }
+      }
+    }
+  }
+  .decorations {
+    &__branch {
+      width: 42%;
+      left: -29%;
+      top: 63%;
+    }
+    &__grass {
+      bottom: -22%;
+    }
+    &__sandbox {
+      width: 37%;
+      right: -21%;
+      top: 68%;
+    }
+    &__swing {
+      display: none;
+    }
+    &__tree {
+      width: 57%;
+      right: -44%;
+      top: 23%;
+    }
+  }
+  .back-page {
+    display: inline-block;
+    color: #FFF;
+    background: none;
+    border: none;
+    text-align: center;
+    text-decoration: underline;
+    position: absolute;
+    top: auto;
+    left: auto;
+    font-weight: normal;
+    z-index: 20;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    padding: 0;
+    font-size: 2.2rem;
+    bottom: 3.5%;
+  }
 }

@@ -21,6 +21,7 @@
 .container {
   height: 100%;
   width: 100%;
+  padding: 9.4rem 0 0 0;
 }
 
 .logo {
@@ -33,21 +34,21 @@
 
 h1 {
   position: absolute;
-  left: 50%;
+  left: 52%;
   font-family: $font-sugarstyle-millenial;
-  font-size: 8.3rem;
+  font-size: 9.2rem;
   color: rgb(240, 89, 38);
   opacity: 0.1;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(-8deg);
   margin: 0;
-  top: 8rem;
+  top: 7rem;
   font-weight: lighter;
 }
 
 .page-title {
   font-weight: bold;
   color: rgb(240, 89, 38);
-  background-image: linear-gradient(90deg,#ef451f,#fcdd57),linear-gradient(#f05926,#f05926);
+  background-image: linear-gradient(0,#ef451f,#fcdd57),linear-gradient(#f05926,#f05926);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
