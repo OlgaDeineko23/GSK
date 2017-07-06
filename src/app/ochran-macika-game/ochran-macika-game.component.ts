@@ -124,7 +124,12 @@ export class OchranMacikaGameComponent implements OnInit {
 
     $('#viruses').click(function(event) {
       if (event.target.tagName == 'IMG') {
-        event.target.parentNode.remove();
+        console.log(event.target.parentNode);
+        var boom = '<img class="virus__boom" src="assets/images/boom.svg" alt="Boom" style="position: absolute; left: 50%; transform: translate(-50%, -50%); top: 50%; width: 200%;" />';
+        $(event.target.parentNode).append(boom);
+        setTimeout(function() {
+          event.target.parentNode.remove();
+        }, 200)
         score++;
         $('#total-score').text(score);
       }
