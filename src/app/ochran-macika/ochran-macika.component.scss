@@ -4,10 +4,18 @@
   font-family: 'Arial';
 }
 
+header {
+  z-index: 20;
+}
+
 .start-game {
   position: relative;
   overflow: hidden;
   height: 100%;
+}
+
+.page {
+  padding-top: 9.4rem;
 }
 
 .page-bg {
@@ -33,23 +41,23 @@
 
 h1 {
   position: absolute;
-  left: 50%;
+  left: 52%;
   font-family: $font-sugarstyle-millenial;
-  font-size: 8.3rem;
+  font-size: 9.2rem;
   color: rgb(240, 89, 38);
   opacity: 0.1;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(-8deg);
   margin: 0;
-  top: 8rem;
+  top: 7rem;
   font-weight: lighter;
 }
 
 .page-title {
   font-weight: bold;
   color: rgb(240, 89, 38);
-      background-image: linear-gradient(90deg,#ef451f,#fcdd57),linear-gradient(#f05926,#f05926);
-          -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(0,#ef451f,#fcdd57),linear-gradient(#f05926,#f05926);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
   font-size: 3rem;
   margin: 0;
@@ -62,7 +70,7 @@ h1 {
   font-size: 1.6rem;
   line-height: 2.2rem;
   margin: 3rem 0 2.2rem 0;
-  padding: 0 3rem;
+  padding: 0 2rem;
   strong {
     color: #F1642A;
     font-weight: bold;
@@ -71,12 +79,21 @@ h1 {
 
 .taddy {
   margin: 0 auto;
-  width: 55%;
+  width: 61%;
   position: relative;
   z-index: 20;
   &:before {
+    content: "";
+    background-color: #000;
+    opacity: 0.1;
     width: 164px;
     height: 28px;
+    position: absolute;
+    bottom: -10px;
+    left: 53%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: -1;
   }
 }
 
