@@ -5,27 +5,32 @@
 
 
   <div class="home-screen__logo">
-    <img src="../../assets/images/hash-logo.png"
-         srcset="../../assets/images/hash-logo@2x.png 2x,
-					 ../../assets/images/hash-logo@3x.png 3x"
-         class="logo">
+    <div class="main-logo">
+      <div class="main-logo__text">
+        #feelbetter
+      </div>
+
+      <div class="main-logo__substrate">
+        #feelbetter
+      </div>
+    </div>
   </div>
 
   <div class="home-screen__btn-area">
     <button [routerLink]="['/anatomia-chorob']" class="btn">
       <img src="../../assets/images/anatomia.svg"
            class="anatomy">
-      <span>Anatomia chorob</span>
+      <span>Anatomia chorôb</span>
     </button>
     <button [routerLink]="['/kalendar-ockovania']" class="btn">
       <img src="../../assets/images/kalendar.svg"
            class="calendar">
-      <span>Kalendar ockovania</span>
+      <span>Kalendár očkovania</span>
     </button>
     <button [routerLink]="['/ochran-macika']" class="btn">
       <img src="../../assets/images/ochran.svg"
            class="ochran">
-      <span>Ochran macika(hra)</span>
+      <span>Ochráň macíka (hra)</span>
     </button>
   </div>
 

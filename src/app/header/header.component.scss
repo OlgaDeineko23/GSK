@@ -2,7 +2,7 @@
 @import "../../assets/styles/utilities/mixins";
 
 .header {
-  @include retina-js("../../assets/images/2.png", 1, auto auto, -180px -842px no-repeat transparent);
+  @include retina-js("../../assets/images/2-sm.png", 1, auto auto, -180px -842px no-repeat transparent);
   position: absolute;
   left: 0;
   right: 0;
@@ -11,9 +11,29 @@
   height: 69px;
   width: 100%;
 
+  @media (min-width: 768px) {
+    @include retina-js("../../assets/images/1-md.png", 1, auto auto, -575px -2075px no-repeat transparent);
+    height: 120px;
+  }
+
+  @media (min-width: 1079px) {
+    @include retina-js("../../assets/images/1-hd.png", 1, auto auto, -430px -2770px no-repeat transparent);
+    height: 307px;
+  }
+
   &__logo {
     margin-top: 15px;
     height: 45px;
     width: 52px;
+
+    @media (min-width: 768px) {
+      margin-top: 36px;
+      width: 88px;
+      height: 76px;
+    }
+
+    @media (min-width: 1079px) {
+      display: none;
+    }
   }
 }

@@ -1,0 +1,56 @@
+.main-logo {
+  position: relative;
+
+  &__text,
+  &__substrate {
+    font-family: $font-sugarstyle-millenial;
+    background: linear-gradient(65deg, rgb(239, 69, 31), rgb(252, 221, 87));
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: shine 3s linear infinite;
+    transform: rotate(-13.2deg);
+    position: relative;
+    font-size: 120px;
+    left: 2%;
+
+    @keyframes shine {
+      to {
+        background-position: -200% center;
+      }
+    }
+
+    @media (min-width: 768px) {
+      font-size: 280px;
+      left: 2%;
+    }
+
+    @media (min-width: 1079px) {
+      font-size: 380px;
+      left: 8%;
+    }
+  }
+
+  &__substrate {
+    animation: none;
+    opacity: .1;
+    position: absolute;
+    font-size: 150px;
+    top: -12%;
+    left: -8%;
+
+    @media (min-width: 768px) {
+      font-size: 350px;
+      top: -12%;
+      left: -8%;
+    }
+
+    @media (min-width: 1079px) {
+      top: -15%;
+      font-size: 500px;
+      left: -4%;
+    }
+  }
+}
