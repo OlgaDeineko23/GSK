@@ -47,6 +47,9 @@ h1 {
 .page-title {
   font-weight: bold;
   color: rgb(240, 89, 38);
+      background-image: linear-gradient(90deg,#ef451f,#fcdd57),linear-gradient(#f05926,#f05926);
+          -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
   text-align: center;
   font-size: 3rem;
   margin: 0;
