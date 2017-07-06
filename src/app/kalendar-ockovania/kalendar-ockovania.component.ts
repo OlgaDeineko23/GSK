@@ -9,7 +9,6 @@ import {FormControl} from "@angular/forms";
 export class KalendarOckovaniaComponent implements OnInit {
   years: any = [];
   fullyear: any;
-  selectedValue: number;
   yeaControl: FormControl;
 
   constructor() {
@@ -28,9 +27,5 @@ export class KalendarOckovaniaComponent implements OnInit {
 
     this.years = range;
 
-  }
-
-  onSubmit(value):void {
-    console.log(value);
   }
 }
