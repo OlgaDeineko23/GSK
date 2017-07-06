@@ -1,16 +1,14 @@
 @import "../assets/styles/utilities/variables";
 
 .main-wrapper {
-  //align-items: center;
-  //display: flex;
-  //justify-content: center;
-  //background-color: #ccc;
   height: 100%;
 
   &__container {
-    //background-color: $white;
-    //position: relative;
     height: 100%;
     overflow: hidden;
+
+    @media (min-width: 1080px) {
+      min-height: 1920px;
+    }
   }
 }
