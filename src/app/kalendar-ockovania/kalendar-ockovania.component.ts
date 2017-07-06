@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-kalendar-ockovania',
@@ -7,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KalendarOckovaniaComponent implements OnInit {
   years: any = [];
-  fullyear:any;
+  fullyear: any;
+  selectedValue: number;
+  yeaControl: FormControl;
 
   constructor() {
     this.years = [];
+    this.yeaControl = new FormControl('');
   }
 
   ngOnInit() {
@@ -23,6 +27,10 @@ export class KalendarOckovaniaComponent implements OnInit {
     }
 
     this.years = range;
+
   }
 
+  onSubmit(value):void {
+    console.log(value);
+  }
 }

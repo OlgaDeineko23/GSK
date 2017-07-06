@@ -1,43 +1,118 @@
 <div class="calendar">
-  <app-header></app-header>
+  <div class="calendar__wrapper">
+    <app-header></app-header>
 
-  <div class="heading">
-    <div class="heading__text">
-      Očkovací kalendár
-    </div>
+    <div class="heading">
+      <div class="heading__text">
+        Očkovací kalendár
+      </div>
 
-    <div class="heading__substrate">
-      #feelbetter
-    </div>
-  </div>
-
-  <p class="calendar__description">
-    Pozrite si zoznam očkovaní, ktoré by ste vy alebo vaše dieťa mali tento rok
-    absolvovať.
-  </p>
-  <form action="" class="calendar__form">
-    <div class="calendar__select">
-      <div class="select">
-        <!--<select name="" id="" class="select__item" *ngFor="let year of years ">-->
-          <!--<option value="1991">{{year}}</option>-->
-        <!--</select>-->
-        <select class="select__item">
-          <option *ngFor="let year of years" [selected]="fullyear">{{year}}</option>
-        </select>
-        <span class="select__addon">
-        <img src="../../assets/images/arrow.svg"
-             class="arrow">
-      </span>
+      <div class="heading__substrate">
+        #feelbetter
       </div>
     </div>
 
-    <div class="calendar__btn">
-      <button class="btn btn--gradient" type="submit" (click)="$event.preventDefault()">
-        Pokračovať
-      </button>
-    </div>
-  </form>
+    <p class="calendar__description" [hidden]="yeaControl.value">
+      Pozrite si zoznam očkovaní, ktoré by ste vy alebo vaše dieťa mali tento
+      rok
+      absolvovať.
+    </p>
+    <form action="" class="calendar__form" #formYear="ngForm">
+      <div class="calendar__select">
+        <div class="select">
+          <select class="select__item" [formControl]="yeaControl" required>
+            <option *ngFor="let year of years" [selected]="fullyear">
+              {{year}}
+            </option>
+          </select>
+          <span class="select__addon">
+        <img src="../../assets/images/arrow.svg"
+             class="arrow">
+      </span>
+        </div>
+      </div>
 
+      <div class="calendar__btn" [hidden]="yeaControl.value">
+        <button class="btn btn--gradient" type="submit">
+          Pokračovať
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="calendar__calendar" [hidden]="!yeaControl.value">
+
+    <!-- BEGIN Calendar-->
+    <div class="section">
+      <div id="calendar">
+        <ul class="main">
+          <li data-age="0" class="cal_section">
+            <header>2010</header>
+            <ul class="calbox">
+              <li>
+                <div class="br">
+                  <strong>Záškrt, tetanus,<br>čieny kašeľ,<br>Vírusová
+                          hepatitída
+                          B</strong>
+                </div>
+                <div class="pt bt"></div>
+                <div>V 3. mesiaci života<br>
+                  <span class="orange">1. dávka (povinné očkovanie)</span>
+                </div>
+              </li>
+              <li>
+                <div class="br"><strong>Invazívne hemofilové ochorenia typu
+                                        b</strong></div>
+                <div class="pt bt"></div>
+                <div>V 5. mesiaci života<br>
+                  <span class="orange">2. dávka (povinné očkovanie)</span>
+                </div>
+              </li>
+              <li>
+                <div class="br"><strong>Detská obrna</strong></div>
+              </li>
+              <li>
+                <div class="br"><strong>Pneumokokové ochorenia</strong></div>
+                <div class="pt bb"></div>
+                <div>V 11. mesiaci života
+                  <br>
+                  <span class="orange">3. dávka (povinné očkovanie)</span>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li data-age="1" class="cal_section">
+            <header>2011</header>
+            <article>
+              <strong>Osýpky, mumps, ružienka (MMR)</strong><br>
+              od 15.mesiaca, najneskôr do 18.mesiaca života<br>
+              <span class="orange">povinné očkovanie</span>
+            </article>
+          </li>
+          <li data-age="6" class="cal_section">
+            <header class="orange">2016</header>
+            <article class="ar"><strong>Záškrt, tetanus, čierny kašeľ, detská
+                                        obrna</strong></article>
+          </li>
+          <li data-age="11" class="cal_section">
+            <header class="orange">2021</header>
+            <article><strong>Osýpky, mumps, ružienka</strong></article>
+          </li>
+          <li data-age="13" class="cal_section">
+            <header class="orange">2023</header>
+            <article class="ar"><strong>Záškrt, tetanus, čierny kašeľ, detská
+                                        obrna</strong></article>
+          </li>
+          <li data-age="25" class="cal_section">
+            <header class="orange">Dospelí</header>
+            <article><strong>Záškrt, tetanus</strong></article>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- END Calendar-->
+
+  </div>
 
   <app-footer></app-footer>
 </div>

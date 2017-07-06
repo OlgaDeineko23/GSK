@@ -27,4 +27,196 @@
   .btn {
     width: 100%;
   }
+
+  &__calendar {
+    overflow: scroll;
+    height: calc(568px - 279px);
+  }
+
+  /deep/ .footer {
+    z-index: 2;
+  }
+}
+
+// TODO: refactor it from main project
+#calendar {
+  $main-header-h: 700px;
+  $white: #fff;
+  $grey: #626465;
+  $black: #000;
+  $semiblack: rgba($black, 0.3);
+  $semiwhite: rgba($white, 0.8);
+  $orange: #f2732f;
+  $blue: #00aeef;
+  $pink: #f493ad;
+  $green: #3c7e73;
+  $green2: #10b0c9;
+  $lightbluegreen: #81cbd4;
+  $brightgreen: #95c11f;
+  $orange-light: #fabe34;
+  $orange-dark: #ed4c2e;
+
+  span {
+
+    &.orange {
+      color: $orange;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    list-style: none;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      width: 1px;
+      background-color: $orange;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      z-index: 1;
+    }
+
+    &.main {
+      margin-bottom: 140px;
+    }
+
+    li {
+      position: relative;
+      z-index: 2;
+      padding: 0;
+      margin: 0;
+      margin-top: 40px;
+      margin-bottom: 40px;
+
+      header {
+        background-color: $blue;
+        color: $white;
+        width: 121px;
+        height: 121px;
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+        font-size: 24px;
+        line-height: 121px;
+        position: relative;
+        text-align: center;
+        z-index: 2;
+
+        &.orange {
+          background: $orange;
+          background: -moz-linear-gradient(45deg, $orange-dark 0%, $orange-light 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(45deg, $orange-dark 0%, $orange-light 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(45deg, $orange-dark 0%, $orange-light 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        }
+      }
+
+      article {
+        width: 33.3%;
+        text-align: right;
+        padding-left: 20px;
+        padding-right: 20px;
+        position: absolute;
+        left: 0px;
+        top: 60px;
+        z-index: 1;
+
+        &:before {
+          content: " ";
+          height: 1px;
+          width: 50%;
+          position: absolute;
+          background-color: $orange;
+          right: -50%;
+          z-index: 1;
+        }
+
+        &.ar {
+          left: inherit;
+          right: 0px;
+          text-align: left;
+
+          &:before {
+            right: inherit;
+            left: -50%;
+          }
+        }
+      }
+    }
+
+    &.calbox {
+      margin-top: 40px;
+      margin-bottom: 40px;
+
+      li {
+        display: flex;
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        div {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          width: 33.3%;
+          position: relative;
+          z-index: 1;
+          text-align: center;
+
+          &:last-of-type {
+            text-align: left;
+            padding-left: 10px;
+          }
+
+          &:first-of-type {
+            text-align: right;
+            padding-right: 10px;
+          }
+
+          &.br {
+            border-right: 1px solid $orange;
+          }
+
+          &.bl {
+            border-left: 1px solid $orange;
+          }
+
+          &.bt {
+            border-top: 1px solid $orange;
+          }
+
+          &.bb {
+            border-bottom: 1px solid $orange;
+          }
+
+          &.pt {
+
+            &:before {
+              z-index: 2;
+              content: " ";
+              background-color: $blue;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              display: block;
+              margin-right: auto;
+              margin-left: auto;
+              top: -30px;
+              position: relative;
+            }
+
+            &.bb {
+
+              &:before {
+                top: inherit;
+                bottom: -30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

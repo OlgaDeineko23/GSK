@@ -23,5 +23,11 @@
     font-weight: bold;
     text-align: center;
     color: $white-two;
+    transition: background-image 0.2s ease-in-out;
+
+    &:hover,
+    &:active {
+      background-image: linear-gradient(to right, rgb(239, 69, 31), rgb(252, 221, 87));
+    }
   }
 }
