@@ -20,7 +20,7 @@
     <form action="" class="calendar__form" #formYear="ngForm">
       <div class="calendar__select">
         <div class="select">
-          <select class="select__item" [formControl]="yeaControl" required>
+          <select class="select__item" [formControl]="yeaControl" [NgModel]="selectedValue" required>
             <option *ngFor="let year of years" [selected]="fullyear">
               {{year}}
             </option>
@@ -47,7 +47,7 @@
       <div id="calendar">
         <ul class="main">
           <li data-age="0" class="cal_section">
-            <header>2010</header>
+            <header>{{year0}}</header>
             <ul class="calbox">
               <li>
                 <div class="br">
@@ -82,7 +82,7 @@
             </ul>
           </li>
           <li data-age="1" class="cal_section">
-            <header>2011</header>
+            <header>{{year1}}</header>
             <article>
               <strong>Osýpky, mumps, ružienka (MMR)</strong><br>
               od 15.mesiaca, najneskôr do 18.mesiaca života<br>
@@ -90,16 +90,16 @@
             </article>
           </li>
           <li data-age="6" class="cal_section">
-            <header class="orange">2016</header>
+            <header class="orange">{{year2}}</header>
             <article class="ar"><strong>Záškrt, tetanus, čierny kašeľ, detská
                                         obrna</strong></article>
           </li>
           <li data-age="11" class="cal_section">
-            <header class="orange">2021</header>
+            <header class="orange">{{year3}}</header>
             <article><strong>Osýpky, mumps, ružienka</strong></article>
           </li>
           <li data-age="13" class="cal_section">
-            <header class="orange">2023</header>
+            <header class="orange">{{year4}}</header>
             <article class="ar"><strong>Záškrt, tetanus, čierny kašeľ, detská
                                         obrna</strong></article>
           </li>
