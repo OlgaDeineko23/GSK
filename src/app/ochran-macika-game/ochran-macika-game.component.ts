@@ -12,13 +12,19 @@ export class OchranMacikaGameComponent implements OnInit {
 
   ngOnInit() {
 
+    /* Game config */
+
+    var maxSpeed = 2200;
+    var minSpeed =  1400;
+    var timeCreat = 800;
+    var animateSpeed = 10;
+
     var centerX = Math.round(($('.taddy').offset().left - $('.game').offset().left) + $('.taddy').width() / 2);
     var centerY = Math.round($('.taddy').position().top + $('.taddy').height() / 2);
 
     $(window).on('resize', function() {
       centerX = Math.round(($('.taddy').offset().left - $('.game').offset().left) + $('.taddy').width() / 2);
       centerY = Math.round($('.taddy').position().top + $('.taddy').height() / 2);
-      console.log(centerX, centerY);
     });
 
     function randomInteger(min, max) {
@@ -33,6 +39,17 @@ export class OchranMacikaGameComponent implements OnInit {
       this.url = url;
       this.size = size;
     }
+
+    function HitBox(obj) {
+      this.startX = $(obj).offset().left - $('.game').offset().left;
+      this.endX = ($(obj).offset().left - $('.game').offset().left) + $(obj).width();
+      this.startY = $(obj).offset().top - $('.game').offset().top;
+      this.endY = ($(obj).offset().top - $('.game').offset().top) + $(obj).height();
+    };
+
+    var head = new HitBox('.taddy__head');
+    var body = new HitBox('.taddy__body') ;
+    var legs = new HitBox('.taddy__legs');
 
     var virusType = 0;
 
@@ -60,41 +77,18 @@ export class OchranMacikaGameComponent implements OnInit {
       }
       var html = '<li class="virus" style="position: absolute; width: ' + virus.size + '; left:' + virus.x + 'px; top:' + virus.y + 'px; z-index: 200;"><img src="' + virus.url + '" alt="Virus"></li></li>';
       $('#viruses').append(html);
-    }, 2000);
-
-    function HitBox(obj) {
-      this.startX = $(obj).offset().left - $('.game').offset().left;
-      this.endX = ($(obj).offset().left - $('.game').offset().left) + $(obj).width();
-      this.startY = $(obj).offset().top - $('.game').offset().top;
-      this.endY = ($(obj).offset().top - $('.game').offset().top) + $(obj).height();
-    };
-
-    var head = new HitBox('.taddy__head');
-    var body = new HitBox('.taddy__body') ;
-    var legs = new HitBox('.taddy__legs');
+      var element = $('#viruses').find('li:last-child');
+      var randomSpeed = randomInteger(minSpeed, maxSpeed);
+      $(element).animate({
+        top: centerY,
+        left: centerX
+      }, randomSpeed, 'linear');
+    }, timeCreat);
 
     var move = setInterval(function() {
       $('.virus').each(function(index, el) {
         var left = $(el).position().left;
         var top = $(el).position().top;
-        if (left < centerX) {
-          left = left + 0.5;
-          $(el).css('left', left + 'px');
-        } else if (left > centerX) {
-          left = left - 0.5;
-          $(el).css('left', left + 'px')
-        }
-        if (top < centerY) {
-          top = top + 0.5;
-          $(el).css('top', top + 'px')
-        } else {
-          top = top - 0.5;
-          $(el).css('top', top + 'px');
-        }
-
-        if (left == centerX && top == centerY) {
-          $(el).remove();
-        }
 
         if (left > head.startX && left < head.endX && top > head.startY && top < head.endY || left > body.startX && left < body.endX && top > body.startY && top < body.endY || left > legs.startX && left < legs.endX && top > legs.startY && top < legs.endY) {
           $('.life__list .life__full').last().addClass('life__lost').removeClass('life__full');
@@ -114,9 +108,7 @@ export class OchranMacikaGameComponent implements OnInit {
           }, 150);
         }
       });
-    }, 10);
-
-    /* Hit bear */
+    }, animateSpeed);
 
     /* Game events*/
 
@@ -124,7 +116,7 @@ export class OchranMacikaGameComponent implements OnInit {
 
     $('#viruses').click(function(event) {
       if (event.target.tagName == 'IMG') {
-        console.log(event.target.parentNode);
+        $(event.target.parentNode).stop();
         var boom = '<img class="virus__boom" src="assets/images/boom.svg" alt="Boom" style="position: absolute; left: 50%; transform: translate(-50%, -50%); top: 50%; width: 200%;" />';
         $(event.target.parentNode).append(boom);
         setTimeout(function() {
