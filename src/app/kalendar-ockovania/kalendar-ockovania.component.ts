@@ -6,11 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['kalendar-ockovania.component.scss']
 })
 export class KalendarOckovaniaComponent implements OnInit {
+  years: any = [];
+  fullyear:any;
 
-  constructor() { 
+  constructor() {
+    this.years = [];
   }
 
   ngOnInit() {
+    this.fullyear = new Date().getFullYear();
+    var range = [];
+
+
+    for (var i = 1950; i <= this.fullyear; i++) {
+      range.push(i);
+    }
+
+    this.years = range;
   }
 
 }

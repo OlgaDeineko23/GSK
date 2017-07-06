@@ -18,13 +18,12 @@
   <form action="" class="calendar__form">
     <div class="calendar__select">
       <div class="select">
-        <select name="" id="" class="select__item">
-          <option value="1991">1991</option>
-          <option value="1991">1991</option>
-          <option value="1991">1991</option>
-          <option value="1991">1991</option>
+        <!--<select name="" id="" class="select__item" *ngFor="let year of years ">-->
+          <!--<option value="1991">{{year}}</option>-->
+        <!--</select>-->
+        <select class="select__item">
+          <option *ngFor="let year of years" [selected]="fullyear">{{year}}</option>
         </select>
-
         <span class="select__addon">
         <img src="../../assets/images/arrow.svg"
              class="arrow">
