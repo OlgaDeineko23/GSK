@@ -18,8 +18,8 @@ export class KalendarOckovaniaComponent implements OnInit {
     var range = [];
 
 
-    for (var i = 1950; i <= this.fullyear; i++) {
-      range.push(i);
+    for (var i = 0; i <= 67; i++) {
+      range.unshift(this.fullyear - i);
     }
 
     this.years = range;
