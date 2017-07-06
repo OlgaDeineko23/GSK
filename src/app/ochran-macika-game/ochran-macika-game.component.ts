@@ -14,10 +14,10 @@ export class OchranMacikaGameComponent implements OnInit {
 
     /* Game config */
 
-    var maxSpeed = 2200;
-    var minSpeed =  1400;
-    var timeCreat = 800;
-    var animateSpeed = 10;
+    var maxSpeed = 3500;
+    var minSpeed =  2500;
+    var timeCreat = 870;
+    var animateSpeed = 20;
 
     var centerX = Math.round(($('.taddy').offset().left - $('.game').offset().left) + $('.taddy').width() / 2);
     var centerY = Math.round($('.taddy').position().top + $('.taddy').height() / 2);
