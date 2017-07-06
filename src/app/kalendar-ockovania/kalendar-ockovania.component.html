@@ -12,16 +12,18 @@
       </div>
     </div>
 
-    <p class="calendar__description" [hidden]="yeaControl.value">
+    <p class="calendar__description" [hidden]="yearControl.value">
       Pozrite si zoznam očkovaní, ktoré by ste vy alebo vaše dieťa mali tento
       rok
       absolvovať.
     </p>
-    <form action="" class="calendar__form" #formYear="ngForm">
+    <form action="" class="calendar__form">
       <div class="calendar__select">
         <div class="select">
-          <select class="select__item" [formControl]="yeaControl" [(ngModel)]="selectedValue" required>
-            <option *ngFor="let year of years" [selected]="fullyear">
+          <select class="select__item" #yearSelect [formControl]="yearControl"
+                  ([NgModel])="yearSelect.value" (change)="toNumber()" required>
+            <option *ngFor="let year of years" [value]="year"
+                    [selected]="fullYear">
               {{year}}
             </option>
           </select>
@@ -32,7 +34,7 @@
         </div>
       </div>
 
-      <div class="calendar__btn" [hidden]="yeaControl.value">
+      <div class="calendar__btn" [hidden]="yearControl.value">
         <button class="btn btn--gradient" type="submit">
           Pokračovať
         </button>
@@ -40,20 +42,20 @@
     </form>
   </div>
 
-  <div class="calendar__calendar" [hidden]="!yeaControl.value">
+  <div class="calendar__calendar" [hidden]="!yearControl.value">
 
     <!-- BEGIN Calendar-->
     <div class="section">
       <div id="calendar">
         <ul class="main">
           <li data-age="0" class="cal_section">
-            <header>{{year0}}</header>
+            <header>
+              {{circleYear}}
+            </header>
             <ul class="calbox">
               <li>
                 <div class="br">
-                  <strong>Záškrt, tetanus,<br>čieny kašeľ,<br>Vírusová
-                          hepatitída
-                          B</strong>
+                  <strong>Záškrt, tetanus,<br>čieny kašeľ,<br>Vírusová hepatitída B</strong>
                 </div>
                 <div class="pt bt"></div>
                 <div>V 3. mesiaci života<br>
@@ -82,7 +84,9 @@
             </ul>
           </li>
           <li data-age="1" class="cal_section">
-            <header>{{year1}}</header>
+            <header>
+              {{circleYear + 1}}
+            </header>
             <article>
               <strong>Osýpky, mumps, ružienka (MMR)</strong><br>
               od 15.mesiaca, najneskôr do 18.mesiaca života<br>
@@ -90,18 +94,28 @@
             </article>
           </li>
           <li data-age="6" class="cal_section">
-            <header class="orange">{{year2}}</header>
-            <article class="ar"><strong>Záškrt, tetanus, čierny kašeľ, detská
-                                        obrna</strong></article>
+            <header class="orange">
+              {{circleYear + 6}}
+            </header>
+            <article class="ar">
+              <strong>Záškrt, tetanus, čierny kašeľ, detskáobrna</strong>
+            </article>
           </li>
           <li data-age="11" class="cal_section">
-            <header class="orange">{{year3}}</header>
-            <article><strong>Osýpky, mumps, ružienka</strong></article>
+            <header class="orange">
+              {{circleYear + 11}}
+            </header>
+            <article>
+              <strong>Osýpky, mumps, ružienka</strong>
+            </article>
           </li>
           <li data-age="13" class="cal_section">
-            <header class="orange">{{year4}}</header>
-            <article class="ar"><strong>Záškrt, tetanus, čierny kašeľ, detská
-                                        obrna</strong></article>
+            <header class="orange">
+              {{circleYear + 16}}
+            </header>
+            <article class="ar">
+              <strong>Záškrt, tetanus, čierny kašeľ, detskáobrna</strong>
+            </article>
           </li>
           <li data-age="25" class="cal_section">
             <header class="orange">Dospelí</header>
