@@ -1,0 +1,26 @@
+.heading {
+  position: relative;
+
+  &__text,
+  &__substrate {
+    background-image: linear-gradient(to right, #ef451f, #fcdd57), linear-gradient($tomato, $tomato);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent
+  }
+
+  &__substrate {
+    font-family: $font-sugarstyle-millenial;
+    font-size: 83.1px;
+    opacity: 0.1;
+    font-weight: normal;
+    transform: rotate(-13.2deg);
+    position: absolute;
+    top: 62%;
+    left: 0;
+    right: 0;
+  }
+}
