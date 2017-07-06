@@ -14,8 +14,8 @@ export class OchranMacikaGameComponent implements OnInit {
 
     /* Game config */
 
-    var maxSpeed = 4000;
-    var minSpeed =  3000;
+    var maxSpeed = 5000;
+    var minSpeed =  4000;
     var timeCreat = 870;
     var animateSpeed = 20;
 
