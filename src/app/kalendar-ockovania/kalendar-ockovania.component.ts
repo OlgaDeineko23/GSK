@@ -32,4 +32,5 @@ export class KalendarOckovaniaComponent implements OnInit {
   toNumber(): void {
     this.circleYear = +this.yearControl.value;
   }
+
 }
