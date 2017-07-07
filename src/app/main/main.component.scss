@@ -16,9 +16,18 @@
 
   &__heading {
     text-align: center;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     position: absolute;
+    left: 49%;
     top: 42%;
+
+  @media (min-width: 768px) {
+    left: 42%;
+  }
+
+@media (min-width: 1079px) {
+  left: 42%;
+}
 
     img {
       width: 130%;
