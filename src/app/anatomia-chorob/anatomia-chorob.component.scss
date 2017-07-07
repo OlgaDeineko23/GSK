@@ -2,78 +2,178 @@
 
 .heading {
   padding-top: 102px;
+
+  @media (min-width: 1080px) {
+    padding-top: 334px;
+  }
 }
 
 .disease {
+  height: 100%;
+  overflow: scroll;
+
+  @media (min-width: 768px) {
+
+  }
+
+  @media (min-width: 1080px) {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 
   &__description {
     text-align: center;
-    width: 171px;
-    height: 50px;
-    font-family: ArialMT;
     font-size: 5.3px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
-    margin: 0 auto;
+    margin: 20px auto 35px;
     color: $warm-grey;
+
+    @media (min-width: 768px) {
+
+    }
+
+    @media (min-width: 1080px) {
+      min-width: 560px;
+      margin: 30px auto 30px;
+    }
 
     strong {
       font-size: 8.9px;
       font-weight: bold;
       color: #f1642a;
     }
+
+    p:first-of-type {
+      font-size: 18px;
+      line-height: 1.33;
+
+      @media (min-width: 768px) {
+
+      }
+
+      @media (min-width: 1080px) {
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+
+      strong {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.33;
+        color: rgb(241, 100, 42);
+
+        @media (min-width: 768px) {
+
+        }
+
+        @media (min-width: 1080px) {
+          font-size: 30px;
+        }
+      }
+    }
+
+    p:last-of-type {
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.36;
+      letter-spacing: normal;
+      text-align: center;
+      color: $warm-grey;
+
+      @media (min-width: 768px) {
+
+      }
+
+      @media (min-width: 1080px) {
+        font-size: 18px;
+      }
+    }
   }
 
   &__anatomy {
-    display: flex;
     justify-content: center;
     position: relative;
     z-index: 1;
     margin-top: 20px;
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__mobile-tabs {
+    padding: 0 20px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    @media (min-width: 1080px) {
+      display: none;
+    }
+
+    svg {
+      margin-top: 60px;
+      margin-bottom: 90px;
+    }
+
+    /deep/ .nav {
+      border-radius: 6px;
+      background-color: $white;
+      box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
+      border-bottom: 0;
+      overflow: hidden;
+
+      .nav-item {
+        border-radius: 6px;
+        width: 50%;
+        text-align: center;
+        height: 52px;
+      }
+
+      .nav-link {
+        border: 0;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        color: $brown-grey;
+        line-height: 52px;
+        padding: 0;
+
+        &.active {
+          background-image: linear-gradient(to right, rgb(239, 69, 31), rgb(252, 221, 87));
+          border-radius: 0;
+          color: $white;
+        }
+      }
+    }
+
+    /deep/ .tab-content {
+
+      .tab-pane {
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 
   /deep/ .footer {
     background-position: -200px 4px;
 
+    @media (min-width: 1080px) {
+      height: 287px;
+      background-position: -1663px 0;
+    }
+
     a {
       margin-top: 37px;
-    }
-  }
-
-  /deep/ .popover {
-    margin: 0;
-    width: 130.4px;
-    border-radius: 5.9px;
-    background-color: $white;
-    box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    border: none;
-    transform: translate(-7.8px, 50%);
-
-    &:before,
-    &::after {
-      border: none;
-    }
-
-    &-title {
-      background-color: $white;
-      border-bottom: none;
-      font-size: 9.8px;
-      font-weight: bold;
-      padding: 0;
-      color: rgb(255, 103, 3);
-      margin-bottom: 10px;
-    }
-
-    &-content {
-      padding: 0;
-      font-family: $font-arial;
-      font-size: 7.7px;
-      color: $warm-grey;
-      line-height: 1.2;
     }
   }
 }

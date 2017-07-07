@@ -33,7 +33,7 @@
     opacity: 0.1;
     transform: rotate(-7deg);
     position: absolute;
-    top: 62%;
+    top: 52%;
     left: 0;
     right: 0;
     font-weight: normal;
@@ -45,6 +45,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    z-index: -1;
 
     @media (min-width: 768px) {
       font-size: 155px;
