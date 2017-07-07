@@ -14,8 +14,8 @@ export class OchranMacikaGameComponent implements OnInit {
 
     /* Game config */
 
-    var maxSpeed = 5000;
-    var minSpeed =  4000;
+    var maxSpeed = 4500;
+    var minSpeed =  3000;
     var timeCreat = 870;
     var animateSpeed = 20;
 
@@ -55,10 +55,8 @@ export class OchranMacikaGameComponent implements OnInit {
 
     var create = setInterval(function() {
       virusType++;
-      var randomImage: any = randomInteger(1, 6);
-      var randomSize: any = randomInteger(9, 12);
-      randomImage = 'assets/images/virus' + randomImage + '.svg';
-      randomSize = randomSize + '%';
+      var randomImage: any = 'assets/images/virus' + randomInteger(1, 6) + '.svg';
+      var randomSize: any = randomInteger(18, 26) + '%';
       if (virusType % 2 > 0) {
         var x = Math.round(Math.random() * $('.game').width());
         if (Math.round(Math.random()) > 0) {
@@ -75,7 +73,7 @@ export class OchranMacikaGameComponent implements OnInit {
           var virus = new Virus(0, y, randomImage, randomSize);
         }
       }
-      var html = '<li class="virus" style="position: absolute; width: ' + virus.size + '; left:' + virus.x + 'px; top:' + virus.y + 'px; z-index: 200;"><img src="' + virus.url + '" alt="Virus"></li></li>';
+      var html = '<li class="virus" style="text-align: center; position: absolute; width: ' + virus.size + '; left:' + virus.x + 'px; top:' + virus.y + 'px; z-index: 200;"><img style="width: 70%; padding: 15% 0;" src="' + virus.url + '" alt="Virus"></li></li>';
       $('#viruses').append(html);
       var element = $('#viruses').find('li:last-child');
       var randomSpeed = randomInteger(minSpeed, maxSpeed);
@@ -117,7 +115,7 @@ export class OchranMacikaGameComponent implements OnInit {
     $('#viruses').click(function(event) {
       if (event.target.tagName == 'IMG') {
         $(event.target.parentNode).stop();
-        var boom = '<img class="virus__boom" src="assets/images/boom.svg" alt="Boom" style="position: absolute; left: 50%; transform: translate(-50%, -50%); top: 50%; width: 200%;" />';
+        var boom = '<img class="virus__boom" src="assets/images/boom.svg" alt="Boom" style="position: absolute; left: 50%; transform: translate(-50%, -50%); top: 50%; width: 150%;" />';
         $(event.target.parentNode).append(boom);
         setTimeout(function() {
           event.target.parentNode.remove();
