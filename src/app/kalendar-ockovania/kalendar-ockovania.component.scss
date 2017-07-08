@@ -23,6 +23,9 @@
 }
 
 .calendar {
+  padding-bottom: 100px;
+  overflow-y: scroll;
+  height: 100%;
 
   &__form {
     padding: 0 43px;
@@ -311,12 +314,12 @@
           font-size: 14px;
           line-height: 1.43;
 
-@media (min-width: 1080px) {
-  font-size: 24px;
-  span {
-    color: #84786f;
-  }
-}
+          @media (min-width: 1080px) {
+            font-size: 24px;
+            span {
+              color: #84786f;
+            }
+          }
 
           strong {
             font-weight: bold;
@@ -393,9 +396,9 @@
                   bottom: -49px;
                 }
 
-@media (min-width: 1080px) {
-  bottom: -76px;
-}
+                @media (min-width: 1080px) {
+                  bottom: -76px;
+                }
 
               }
             }

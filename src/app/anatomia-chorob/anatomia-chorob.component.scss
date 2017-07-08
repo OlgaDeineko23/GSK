@@ -3,6 +3,10 @@
 .heading {
   padding-top: 102px;
 
+  @media (min-width: 768px) {
+    padding-top: 200px;
+  }
+
   @media (min-width: 1080px) {
     padding-top: 300px;
   }
@@ -109,6 +113,21 @@
     @media (min-width: 768px) {
       display: flex;
     }
+
+    svg {
+
+      @media (min-width: 768px) {
+        height: 636px;
+        width: 590px;
+        margin-bottom: 150px;
+      }
+
+      @media (min-width: 1080px) {
+        height: auto;
+        width: auto;
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__mobile-tabs {
@@ -125,6 +144,11 @@
     svg {
       margin-top: 60px;
       margin-bottom: 90px;
+
+      @media (min-width: 768px) {
+        height: 636px !important;
+        width: 590px !important;
+      }
     }
 
     /deep/ .nav {
@@ -169,10 +193,16 @@
 
   /deep/ .footer {
     background-position: -450px 4px;
+    z-index: 999;
+
+    @media (min-width: 768px) {
+      background-position: -1140px 4px;
+    }
 
     @media (min-width: 1080px) {
       height: 287px;
       background-position: -1663px 0;
+      z-index: 0;
     }
 
     a {

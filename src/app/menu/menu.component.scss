@@ -4,6 +4,12 @@
 .home-screen {
   position: relative;
   height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  /deep/ .header {
+    position: fixed;
+  }
 
   &__logo {
     padding-top: 85px;
@@ -63,7 +69,7 @@
   }
 
   &__btn-area {
-    padding: 0 3.5rem;
+    padding: 0 3.5rem 90px;
 
     @media (min-width: 768px) {
       display: flex;
@@ -82,10 +88,14 @@
       width: 100%;
       margin-bottom: 17px;
 
+      overflow:hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
       @media (min-width: 768px) {
         box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
         font-size: 20px;
-        width: 313px;
+        width: 373px;
       }
 
       @media (min-width: 1079px) {
@@ -117,7 +127,7 @@
 
   &__footer {
     @include retina-js("../../assets/images/1-sm.png", 1, auto auto, -720px 4px no-repeat transparent);
-    position: absolute;
+    position: fixed;
     bottom: 0;
     height: 90px;
     left: 0;
