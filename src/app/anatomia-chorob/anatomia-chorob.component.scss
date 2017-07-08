@@ -10,7 +10,7 @@
 
 .disease {
   height: 100%;
-  overflow: scroll;
+  overflow-x: hidden;
 
   @media (min-width: 768px) {
 
@@ -168,7 +168,7 @@
   }
 
   /deep/ .footer {
-    background-position: -200px 4px;
+    background-position: -450px 4px;
 
     @media (min-width: 1080px) {
       height: 287px;
