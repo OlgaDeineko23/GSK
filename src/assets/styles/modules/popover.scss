@@ -6,9 +6,27 @@
   box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
   padding: 15px;
   border: none;
-  transform: translate(-18px, 55%);
   max-width: 280px;
   width: 100%;
+
+  &-right,
+  &-left {
+    transform: translate(25px, 53%);
+  }
+
+
+  @media (min-width: 768px) {
+
+  }
+
+  @media (min-width: 1080px) {
+    border-radius: 20px;
+    background-color: $white;
+    box-shadow: 0 8px 76px 0 rgba(0, 0, 0, 0.1);
+    max-width: 440px;
+    width: 100%;
+    padding: 47px;
+  }
 
   &:before,
   &::after {
@@ -29,7 +47,10 @@
     }
 
     @media (min-width: 1080px) {
-
+      font-size: 33px;
+      font-weight: bold;
+      color: rgb(255, 103, 3);
+      margin-bottom: 30px;
     }
   }
 
@@ -39,5 +60,14 @@
     font-size: 16px;
     line-height: 1.38;
     color: $warm-grey;
+
+    @media (min-width: 768px) {
+
+    }
+
+    @media (min-width: 1080px) {
+      font-size: 26px;
+      color: $warm-grey;
+    }
   }
 }
