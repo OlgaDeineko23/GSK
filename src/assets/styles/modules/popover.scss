@@ -17,6 +17,10 @@
     transform: translate(29px, 52%);
   }
 
+  &-bottom.popover-bottom {
+    margin-top: -3px;
+  }
+
 
   @media (min-width: 768px) {
 
