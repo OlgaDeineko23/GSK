@@ -9,9 +9,12 @@
   max-width: 280px;
   width: 100%;
 
-  &-right,
+  &-right {
+    transform: translate(-20px, 52%);
+  }
+
   &-left {
-    transform: translate(25px, 53%);
+    transform: translate(29px, 52%);
   }
 
 
