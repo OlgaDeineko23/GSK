@@ -251,9 +251,9 @@ $breakpoint-small: 30rem;
    * Loop ver the image path and figure out the
    * position of the dot where the extension begins.
    */
-  @for $i from $length through $length - 10{
+  @for $i from $length through $length - 10 {
     @if $position == -1 {
-      $char : str-slice($strpath, $i, $i);
+      $char: str-slice($strpath, $i, $i);
       @if str-index($char, ".") == 1 {
         $position: $i;
       }
@@ -281,12 +281,9 @@ $breakpoint-small: 30rem;
     /*
      * Create an @2x-ish media query.
      */
-    @media all and (-webkit-min-device-pixel-ratio : 1.5),
-    all and (-o-min-device-pixel-ratio: 3/2),
-    all and (min--moz-device-pixel-ratio: 1.5),
-    all and (min-device-pixel-ratio: 1.5) {
-      background      : url("#{$at2x_path}") $extras;
-      background-size : $size;
+    @media all {
+      background: url("#{$at2x_path}") $extras;
+      background-size: $size;
     }
 
     /*
@@ -298,8 +295,8 @@ $breakpoint-small: 30rem;
         $suffix: "@#{$env}x";
         @media (-webkit-min-device-pixel-ratio: $env),
         (min-resolution: $env * 96dpi) {
-          background      : url("#{$base}#{$suffix}.#{$ext}") $extras;
-          background-size : $size;
+          background: url("#{$base}#{$suffix}.#{$ext}") $extras;
+          background-size: $size;
         }
       }
     }

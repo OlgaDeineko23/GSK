@@ -4,7 +4,7 @@
   padding-top: 102px;
 
   @media (min-width: 1080px) {
-    padding-top: 334px;
+    padding-top: 300px;
   }
 }
 
@@ -32,6 +32,8 @@
     letter-spacing: normal;
     margin: 20px auto 35px;
     color: $warm-grey;
+    max-width: 275px;
+    width: 100%;
 
     @media (min-width: 768px) {
 
@@ -134,7 +136,7 @@
 
       .nav-item {
         border-radius: 6px;
-        width: 50%;
+        width: 100%;
         text-align: center;
         height: 52px;
       }
@@ -175,6 +177,12 @@
 
     a {
       margin-top: 37px;
+
+      @media (min-width: 1080px) {
+        margin-top: 100px;
+        position: relative;
+        z-index: 9999;
+      }
     }
   }
 }
