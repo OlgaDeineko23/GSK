@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 declare var $:any;
 
 @Component({
+  moduleId : module.id,
   selector: 'app-ochran-macika-game',
   templateUrl: './ochran-macika-game.component.html',
   styleUrls: ['./ochran-macika-game.component.scss']

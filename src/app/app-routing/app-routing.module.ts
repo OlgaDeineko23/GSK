@@ -11,14 +11,15 @@ import {OchranMacikaGameComponent} from '../ochran-macika-game/ochran-macika-gam
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/main', pathMatch: 'full'},
-  {path: 'main', component: MainComponent},
+  {path: '', redirectTo: '/', pathMatch: 'full'},
+  {path: '', component: MainComponent},
   {path: 'menu', component: MenuComponent},
   {path: 'anatomia-chorob', component: AnatomiaChorobComponent},
   {path: 'kalendar-ockovania', component: KalendarOckovaniaComponent},
   {path: 'ochran-macika', component: OchranMacikaComponent},
   {path: 'ochran-macika/game', component: OchranMacikaGameComponent},
   {path: 'ochran-macika/result', component: OchranMacikaResultComponent},
+  { path: '**', redirectTo: '/'}
 ];
 
 @NgModule({

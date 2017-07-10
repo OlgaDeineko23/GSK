@@ -2,9 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl} from "@angular/forms";
 
 @Component({
+  moduleId : module.id,
   selector: 'app-kalendar-ockovania',
   templateUrl: './kalendar-ockovania.component.html',
-  styleUrls: ['kalendar-ockovania.component.scss']
+  styleUrls: ['./kalendar-ockovania.component.scss']
 })
 export class KalendarOckovaniaComponent implements OnInit {
   years: number[];

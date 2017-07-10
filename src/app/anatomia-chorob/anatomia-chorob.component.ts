@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
+  moduleId : module.id,
   selector: 'app-anatomia-chorob',
   templateUrl: './anatomia-chorob.component.html',
-  styleUrls: ['anatomia-chorob.component.scss']
+  styleUrls: ['./anatomia-chorob.component.scss']
 })
 export class AnatomiaChorobComponent implements OnInit {
   public womenData: object;
