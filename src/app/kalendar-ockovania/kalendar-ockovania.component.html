@@ -43,7 +43,7 @@
       </div>
 
       <div class="calendar__btn" [hidden]="yearSelectForm.submitted">
-        <button class="btn btn--gradient" type="submit">
+        <button class="btn btn--gradient" type="submit" [disabled]="!yearControl.value">
           Pokračovať
         </button>
       </div>
